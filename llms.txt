@@ -1,0 +1,32 @@
+# PostSearchLabs
+
+> PostSearchLabs is an AI search visibility (generative engine optimization, GEO) agency founded by Ayan Chakraborty. We get local practices and B2B startups recommended by ChatGPT, Gemini, Perplexity, Claude and Google AI, and turn those recommendations into booked calls, consultations and demos.
+
+AI assistants now answer "who should I go with?" questions with two or three names. PostSearchLabs works on every signal those assistants rely on (business profiles, website structure and structured data, pages written to be quoted, reviews, and third-party sources) so that a client's business is one of the names. We report on recommendations, AI-referred traffic and the customers that follow, not on rankings alone. We do not guarantee placement in any AI answer; no one honestly can.
+
+Who we work with:
+
+- Local practices where one new customer is worth thousands: plastic surgeons, med spas, hair restoration clinics and other high-ticket local services.
+- B2B SaaS and AI startups from seed to Series B that compete with larger incumbents for the same buyers.
+
+How an engagement works:
+
+1. Week 1, free AI visibility audit: we run the real questions customers ask across ChatGPT, Gemini, Perplexity, Claude and Google AI and map who gets named instead of the client.
+2. Days 1-90, visibility sprint: profiles, site structure, quotable pages, structured data, reviews and third-party mentions.
+3. Month 4 onward: ongoing work with monthly reporting on which answers name the client and what that brought in.
+
+Typical time to meaningful movement is 60 to 90 days.
+
+## Pages
+
+- [Home](https://postsearchlabs.com/): What changed in search, who we help, how we work, and frequently asked questions.
+- [For local practices](https://postsearchlabs.com/local.html): AI visibility for plastic surgeons, med spas and hair restoration clinics, including services, process and FAQ.
+- [For startups](https://postsearchlabs.com/startups.html): AI share of voice for B2B SaaS and AI startups, including services, process and FAQ.
+
+## Contact
+
+- [Book a free 30-minute strategy call](https://cal.com/postsearchlabs-kp4ztq/30min): on the call we run the questions your customers ask AI and show, live, who gets recommended.
+
+## Optional
+
+- [Privacy policy](https://postsearchlabs.com/privacy.html)
