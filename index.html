@@ -145,6 +145,37 @@
     </div>
   </section>
 
+  <!-- Signal map: scroll-driven animation, see atlas.js. Without JS or with reduced motion it reads as a stacked section. -->
+  <section class="atlas" data-atlas aria-label="How AI assistants decide who to recommend">
+    <div class="atlas__stage">
+      <canvas class="atlas__canvas" aria-hidden="true"></canvas>
+      <div class="atlas__copy">
+        <div class="atlas__line" data-beat>
+          <p class="kicker">How AI decides</p>
+          <h2>Before AI names anyone, <span class="atlas__mark">it reads all of this.</span></h2>
+        </div>
+        <div class="atlas__line" data-beat>
+          <p class="atlas__say">Reviews. Directories. Forums. Press.</p>
+          <p class="lede">Every mention of your business is a signal. Most owners never see which ones count, or which ones are missing.</p>
+        </div>
+        <div class="atlas__line atlas__line--answer" data-beat>
+          <p class="atlas__say">Then it gives one answer, with three names.</p>
+          <div class="atlas__card">
+            <p class="atlas__engines" data-engines>ChatGPT · Gemini · Perplexity · Claude</p>
+            <p class="atlas__q">› <span data-question>best plastic surgeon in miami</span></p>
+            <ol class="atlas__names">
+              <li><span class="atlas__you" data-you>Your practice</span></li>
+              <li>[Competitor A]</li>
+              <li>[Competitor B]</li>
+            </ol>
+          </div>
+          <a class="atlas__cta" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">See who AI names in your market →</a>
+        </div>
+      </div>
+      <p class="atlas__note">Illustration. Logos show public sources AI assistants can read. No affiliation or endorsement implied.</p>
+    </div>
+  </section>
+
   <!-- What changed -->
   <section class="section section--line">
     <div class="wrap">
@@ -330,5 +361,6 @@
 </footer>
 
 <script src="site.js"></script>
+<script src="atlas.js" defer></script>
 </body>
 </html>
