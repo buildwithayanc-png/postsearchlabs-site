@@ -6,9 +6,7 @@
   or a direct .mp4 file link.
 */
 var VIDEOS = {
-  home: "",
-  local: "",
-  startups: ""
+  home: ""
 };
 
 (function () {

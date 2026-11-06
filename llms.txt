@@ -1,31 +1,39 @@
 # PostSearchLabs
 
-> PostSearchLabs is an AI search visibility (generative engine optimization, GEO) agency founded by Ayan Chakraborty. We get local practices and B2B startups recommended by ChatGPT, Gemini, Perplexity, Claude and Google AI, and turn those recommendations into booked calls, consultations and demos.
+> PostSearchLabs is an AI search visibility (generative engine optimization, GEO) agency for B2B SaaS and AI startups from seed to Series B, founded by Ayan Chakraborty. We get startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose, and we tie that visibility to signups, demos and pipeline.
 
-AI assistants now answer "who should I go with?" questions with two or three names. PostSearchLabs works on every signal those assistants rely on (business profiles, website structure and structured data, pages written to be quoted, reviews, and third-party sources) so that a client's business is one of the names. We report on recommendations, AI-referred traffic and the customers that follow, not on rankings alone. We do not guarantee placement in any AI answer; no one honestly can.
+Software buyers now build vendor shortlists inside AI assistants before they talk to sales. Each answer names two or three tools. PostSearchLabs works on every signal those assistants rely on (positioning and structured data, comparison and alternatives pages, review platforms, best-tools listicles, communities and docs) so that a startup's product is one of the names. We work only with software startups. We do not guarantee placement in any AI answer; no one honestly can.
 
 Who we work with:
 
-- Local practices where one new customer is worth thousands: plastic surgeons, med spas, hair restoration clinics and other high-ticket local services.
-- B2B SaaS and AI startups from seed to Series B that compete with larger incumbents for the same buyers.
+- B2B SaaS and AI startups, seed to Series B, with a live product and paying customers, competing with larger incumbents for the same buyers.
+- Categories include B2B SaaS, AI tools, vertical SaaS, dev tools, fintech, HR and payroll, and sales and marketing tech.
+
+What an engagement includes:
+
+- Buyer prompt map: the recommendation, alternatives and "X vs Y" prompts buyers in the category use.
+- Share-of-voice baseline across six AI engines: ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and Google AI Mode, each tracked separately.
+- Citation gap map: the third-party sources AI cites for the category and which ones leave the startup out.
+- Entity and schema fixes: consistent product description, structured data, llms.txt and AI crawler access.
+- Comparison and alternatives pages and answer-first content, approved by the client's team before anything ships.
+- Monthly AI attribution report: share of voice, citations, AI-referred traffic and self-reported AI-sourced signups and demos.
 
 How an engagement works:
 
-1. Week 1, free AI visibility audit: we run the real questions customers ask across ChatGPT, Gemini, Perplexity, Claude and Google AI and map who gets named instead of the client.
-2. Days 1-90, visibility sprint: profiles, site structure, quotable pages, structured data, reviews and third-party mentions.
-3. Month 4 onward: ongoing work with monthly reporting on which answers name the client and what that brought in.
+1. Week 1, free share-of-voice audit: we map buyer prompts, run them across the major AI engines and show who gets recommended instead of the client.
+2. Days 1-90, visibility sprint: positioning, structured data, comparison pages and third-party citations.
+3. Month 4 onward: ongoing content and citations with monthly reporting on share of voice and pipeline.
 
 Typical time to meaningful movement is 60 to 90 days.
 
 ## Pages
 
-- [Home](https://postsearchlabs.com/): What changed in search, who we help, how we work, and frequently asked questions.
-- [For local practices](https://postsearchlabs.com/local.html): AI visibility for plastic surgeons, med spas and hair restoration clinics, including services, process and FAQ.
-- [For startups](https://postsearchlabs.com/startups.html): AI share of voice for B2B SaaS and AI startups, including services, process and FAQ.
+- [Home](https://postsearchlabs.com/): The shift to AI shortlists, a free shortlist test, deliverables, comparison with other options, the first 30 days, a pipeline model, how results are measured, fit check and FAQ.
+- [AI Shortlist Scorecard](https://postsearchlabs.com/scorecard.html): A free 12-question self-audit that scores how ready a startup is to be recommended by AI and lists the top fixes.
 
 ## Contact
 
-- [Book a free 30-minute strategy call](https://cal.com/postsearchlabs-kp4ztq/30min): on the call we run the questions your customers ask AI and show, live, who gets recommended.
+- [Book a free 30-minute share-of-voice call](https://cal.com/postsearchlabs-kp4ztq/30min): we run your buyers' real prompts and show, live, which tools AI recommends.
 
 ## Optional
 
