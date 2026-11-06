@@ -10,7 +10,10 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,13 +24,18 @@
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
       <span>PostSearch<em>Labs</em></span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="./#test">Shortlist test</a>
-      <a href="./#how">How it works</a>
-      <a href="scorecard.html">Free scorecard</a>
-      <a href="./#faq">FAQ</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav__links">
+        <a href="./#test">Shortlist test</a>
+        <a href="./#how">How it works</a>
+        <a href="scorecard.html">Free scorecard</a>
+        <a href="./#faq">FAQ</a>
+      </div>
       <a class="btn btn--primary" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="menu-btn__a" d="M4 7h16"></path><path class="menu-btn__b" d="M4 12h16"></path><path class="menu-btn__c" d="M4 17h16"></path></svg>
+    </button>
   </div>
 </header>
 
@@ -74,5 +82,6 @@
   </div>
 </footer>
 
+<script src="site.js" defer></script>
 </body>
 </html>

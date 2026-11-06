@@ -101,7 +101,10 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -112,13 +115,18 @@
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
       <span>PostSearch<em>Labs</em></span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#test">Shortlist test</a>
-      <a href="#how">How it works</a>
-      <a href="scorecard.html">Free scorecard</a>
-      <a href="#faq">FAQ</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav__links">
+        <a href="#test">Shortlist test</a>
+        <a href="#how">How it works</a>
+        <a href="scorecard.html">Free scorecard</a>
+        <a href="#faq">FAQ</a>
+      </div>
       <a class="btn btn--primary" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="menu-btn__a" d="M4 7h16"></path><path class="menu-btn__b" d="M4 12h16"></path><path class="menu-btn__c" d="M4 17h16"></path></svg>
+    </button>
   </div>
 </header>
 
@@ -305,19 +313,19 @@
         <form class="tester__form" data-tester-form autocomplete="off">
           <div class="field">
             <label for="t-product">Your product</label>
-            <input id="t-product" name="product" type="text" placeholder="e.g. Invoicely" maxlength="60">
+            <input id="t-product" name="product" type="text" autocapitalize="words" enterkeyhint="next" placeholder="e.g. Invoicely" maxlength="60">
           </div>
           <div class="field">
             <label for="t-category">Category</label>
-            <input id="t-category" name="category" type="text" placeholder="e.g. invoicing software" maxlength="60">
+            <input id="t-category" name="category" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. invoicing software" maxlength="60">
           </div>
           <div class="field">
             <label for="t-audience">Who it's for</label>
-            <input id="t-audience" name="audience" type="text" placeholder="e.g. freelancers" maxlength="60">
+            <input id="t-audience" name="audience" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. freelancers" maxlength="60">
           </div>
           <div class="field">
             <label for="t-competitor">Biggest competitor</label>
-            <input id="t-competitor" name="competitor" type="text" placeholder="e.g. FreshBooks" maxlength="60">
+            <input id="t-competitor" name="competitor" type="text" autocapitalize="words" enterkeyhint="done" placeholder="e.g. FreshBooks" maxlength="60">
           </div>
         </form>
         <p class="tester__hint" data-tester-hint>Showing example prompts. Type your own details above and the prompts update as you go.</p>
@@ -365,7 +373,7 @@
         <h2>Real deliverables, not a dashboard you have to interpret.</h2>
         <p class="lede">We work on everything AI weighs before it recommends a tool, and every piece of work has a name and an owner.</p>
       </div>
-      <div class="deliv">
+      <div class="deliv swipe" data-swipe>
         <div class="deliv__item">
           <span class="deliv__tag">Week 1</span>
           <h3>Buyer prompt map</h3>
@@ -418,7 +426,6 @@
         <h2>Why not just buy a tool, or ask your SEO agency?</h2>
         <p class="lede">You can. Here's what each option actually covers.</p>
       </div>
-      <p class="vs__swipe">Swipe to compare all four options →</p>
       <div class="vs-wrap">
         <table class="vs">
           <thead>
@@ -433,45 +440,45 @@
           <tbody>
             <tr>
               <th scope="row">See which AI engines recommend you, prompt by prompt</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Six engines, tracked separately</td>
-              <td><span class="y" aria-label="Yes">✓</span>Core feature</td>
-              <td><span class="p" aria-label="Partly">~</span>Often rankings only</td>
-              <td><span class="p" aria-label="Partly">~</span>Manual spot checks</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Six engines, tracked separately</td>
+              <td data-label="AI tracking tool"><span class="y" aria-label="Yes">✓</span>Core feature</td>
+              <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Often rankings only</td>
+              <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Manual spot checks</td>
             </tr>
             <tr>
               <th scope="row">Someone who ships the fixes</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Pages, schema, citations</td>
-              <td><span class="n" aria-label="No">–</span>You do the work</td>
-              <td><span class="y" aria-label="Yes">✓</span>Built for Google</td>
-              <td><span class="p" aria-label="Partly">~</span>If there's bandwidth</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Pages, schema, citations</td>
+              <td data-label="AI tracking tool"><span class="n" aria-label="No">–</span>You do the work</td>
+              <td data-label="SEO agency"><span class="y" aria-label="Yes">✓</span>Built for Google</td>
+              <td data-label="In-house"><span class="p" aria-label="Partly">~</span>If there's bandwidth</td>
             </tr>
             <tr>
               <th scope="row">Off-site work: reviews, listicles, communities</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Where AI actually looks</td>
-              <td><span class="n" aria-label="No">–</span>Not included</td>
-              <td><span class="p" aria-label="Partly">~</span>Usually backlinks</td>
-              <td><span class="p" aria-label="Partly">~</span>Ad hoc</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Where AI actually looks</td>
+              <td data-label="AI tracking tool"><span class="n" aria-label="No">–</span>Not included</td>
+              <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Usually backlinks</td>
+              <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Ad hoc</td>
             </tr>
             <tr>
               <th scope="row">Reporting tied to signups and demos</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Referrer + self-reported</td>
-              <td><span class="p" aria-label="Partly">~</span>Visibility scores</td>
-              <td><span class="p" aria-label="Partly">~</span>Traffic and rankings</td>
-              <td><span class="p" aria-label="Partly">~</span>If you build it</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Referrer + self-reported</td>
+              <td data-label="AI tracking tool"><span class="p" aria-label="Partly">~</span>Visibility scores</td>
+              <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Traffic and rankings</td>
+              <td data-label="In-house"><span class="p" aria-label="Partly">~</span>If you build it</td>
             </tr>
             <tr>
               <th scope="row">Built for startup buyer journeys</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Startups only</td>
-              <td><span class="p" aria-label="Partly">~</span>Any industry</td>
-              <td><span class="p" aria-label="Partly">~</span>Any industry</td>
-              <td><span class="y" aria-label="Yes">✓</span>You know your buyers</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Startups only</td>
+              <td data-label="AI tracking tool"><span class="p" aria-label="Partly">~</span>Any industry</td>
+              <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Any industry</td>
+              <td data-label="In-house"><span class="y" aria-label="Yes">✓</span>You know your buyers</td>
             </tr>
             <tr>
               <th scope="row">Time to a first baseline</th>
-              <td class="us"><span class="y" aria-label="Yes">✓</span>Week 1</td>
-              <td><span class="y" aria-label="Yes">✓</span>Days, once set up</td>
-              <td><span class="p" aria-label="Partly">~</span>Varies</td>
-              <td><span class="p" aria-label="Partly">~</span>Weeks to learn</td>
+              <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Week 1</td>
+              <td data-label="AI tracking tool"><span class="y" aria-label="Yes">✓</span>Days, once set up</td>
+              <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Varies</td>
+              <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Weeks to learn</td>
             </tr>
           </tbody>
         </table>
@@ -487,7 +494,7 @@
         <p class="kicker">How it works</p>
         <h2>From missing to shortlisted in three steps.</h2>
       </div>
-      <div class="steps">
+      <div class="steps swipe" data-swipe>
         <div class="step">
           <div class="step__top"><span class="step__n">1</span><span class="step__time">Week 1</span></div>
           <h3>Free share-of-voice audit</h3>
@@ -583,7 +590,7 @@
         <h2>AI traffic hides in your analytics. <em>We make it visible.</em></h2>
         <p class="lede">Many buyers read an AI answer, then type your URL or search your name. Default analytics files that under "direct". So we measure three ways and report all three.</p>
       </div>
-      <div class="attrib">
+      <div class="attrib swipe" data-swipe>
         <div class="attrib__card">
           <h3>1. Share of voice</h3>
           <p>A fixed set of buyer prompts, run on every engine each month. You see exactly which answers name you and which name a competitor.</p>

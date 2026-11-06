@@ -176,13 +176,6 @@ h3 { font-family: var(--body); font-size: 20px; line-height: 1.3; font-weight: 6
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
 .nav .btn { min-height: 44px; padding: 10px 18px; font-size: 15px; color: var(--on-accent); }
 .nav .btn:hover { color: var(--on-accent); }
-/* Phones: keep logo and booking button on one row; the audience links stay in the page body and footer */
-@media (max-width: 600px) {
-  .site-header .wrap { flex-wrap: nowrap; padding-block: 10px; }
-  .nav { flex-wrap: nowrap; }
-  .nav a:not(.btn) { display: none; }
-  .nav .btn { min-height: 40px; padding: 8px 16px; font-size: 14px; }
-}
 
 /* Hero */
 .hero { padding-block: clamp(48px, 7vw, 88px) clamp(64px, 8vw, 104px); }
@@ -683,10 +676,232 @@ button.btn { cursor: pointer; }
   .mbar { transition: none; }
 }
 
+.btn .short { display: none; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 .final__alt { font-family: var(--mono); font-size: 14px; color: var(--on-deep-muted); text-decoration: underline; text-underline-offset: 4px; }
 .final__alt:hover { color: var(--on-deep); }
 .vs td { position: relative; padding-left: 50px; }
 .vs td > .y, .vs td > .n, .vs td > .p { position: absolute; left: 18px; top: 16px; margin: 0; }
-.vs__swipe { display: none; font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 10px; }
-@media (max-width: 760px) { .vs__swipe { display: block; } }
+
+/* ==================================================================
+   MOBILE LAYER (Nov 2026)
+   Menu, sticky header, tighter rhythm, 44px tap targets, swipe rows,
+   stacked comparison cards, compact scorecard bar.
+   ================================================================== */
+
+/* Header menu */
+.nav__links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; }
+.menu-btn { display: none; }
+button, a, summary, input[type="range"] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+[id] { scroll-margin-top: 84px; }
+
+@media (max-width: 860px) {
+  .site-header { position: sticky; top: 0; z-index: 30; transition: transform 0.25s; }
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header .wrap { flex-wrap: nowrap; padding-block: 10px; gap: 10px; }
+  .brand { font-size: 18px; }
+  .brand em { font-size: 21px; }
+  .nav { flex-wrap: nowrap; gap: 8px; margin-left: auto; }
+  .nav .btn { min-height: 44px; padding: 8px 16px; font-size: 14px; }
+  .menu-btn {
+    display: inline-grid; place-items: center; flex: none;
+    width: 44px; height: 44px; border-radius: 12px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
+  }
+  .menu-btn path { transition: transform 0.2s, opacity 0.2s; transform-origin: 12px 12px; }
+  .menu-btn[aria-expanded="true"] .menu-btn__a { transform: translateY(5px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .menu-btn__b { opacity: 0; }
+  .menu-btn[aria-expanded="true"] .menu-btn__c { transform: translateY(-5px) rotate(-45deg); }
+  .nav__links {
+    position: absolute; left: 0; right: 0; top: 100%;
+    display: none; flex-direction: column; align-items: stretch; gap: 0;
+    padding: 6px max(16px, env(safe-area-inset-left, 0px)) 16px;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+    box-shadow: 0 24px 40px -28px var(--shadow);
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__links a { display: flex; align-items: center; min-height: 52px; font-size: 18px; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--line); }
+  .nav__links a:last-child { border-bottom: 0; }
+  .nav__links a::after { content: "→"; margin-left: auto; color: var(--accent); font-family: var(--mono); }
+}
+@media (max-width: 360px) {
+  .brand svg { width: 22px; height: 22px; }
+  .brand { font-size: 16px; gap: 6px; }
+  .brand em { font-size: 19px; }
+  .nav .btn { padding: 8px 12px; font-size: 13px; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+
+  /* Rhythm */
+  .section { padding-block: 56px; }
+  .section__head { gap: 14px; margin-bottom: 32px; }
+  h1 { font-size: clamp(38px, 11vw, 46px); line-height: 1.02; }
+  h2 { font-size: clamp(31px, 8.6vw, 38px); line-height: 1.06; }
+  h3 { font-size: 18px; }
+  .lede { font-size: 17px; }
+  .eyebrow, .kicker { font-size: 12px; letter-spacing: 0.06em; }
+
+  /* Hero: get the video and the booking button into the first screen sooner */
+  .hero { padding-block: 28px 48px; }
+  .hero__top { gap: 14px; }
+  .hero__video { margin-top: 24px; }
+  .video { border-radius: 14px; }
+  .book { margin-top: 18px; gap: 12px; }
+  .book .btn--lg { width: 100%; min-height: 56px; font-size: 17px; padding: 14px 20px; }
+  .book__note { font-size: 14px; }
+  .book .textlink { display: inline-flex; align-items: center; min-height: 44px; }
+  .engines { margin-top: 32px; }
+  .engines__row { gap: 8px; }
+  .engines__row span { font-size: 13px; padding: 6px 11px; }
+
+  /* Animation: shorter scroll distance on phones */
+  .atlas--live { height: 230vh; }
+  .atlas__note { font-size: 11px; }
+  .atlas__cta { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* Compare panels */
+  .compare { gap: 14px; }
+  .links { gap: 7px; }
+
+  /* Pains */
+  .pain { padding-block: 22px; }
+
+  /* Stats */
+  .stats { gap: 28px; }
+
+  /* Swipe rows: one card at a time with the next one peeking */
+  .swipe {
+    display: grid; grid-auto-flow: column; grid-template-columns: none;
+    grid-auto-columns: 84%; gap: 12px;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+    margin-inline: -16px; padding-inline: 16px; padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .swipe::-webkit-scrollbar { display: none; }
+  .swipe > * { scroll-snap-align: start; }
+  .dots { display: flex; justify-content: center; gap: 6px; margin-top: 16px; }
+  .dots span { width: 6px; height: 6px; border-radius: 3px; background: var(--line); transition: width 0.2s, background-color 0.2s; }
+  .dots span.is-on { width: 18px; background: var(--accent); }
+  .band .dots span { background: var(--deep-line); }
+  .band .dots span.is-on { background: var(--deep-accent); }
+
+  /* Shortlist test */
+  .tester { padding: 18px 16px; gap: 20px; border-radius: 18px; margin-inline: -4px; }
+  .tester__form { gap: 12px; }
+  .tprompt { padding: 18px 0; gap: 12px; }
+  .tprompt__q { font-size: 14px; }
+  .tprompt__run {
+    flex-wrap: nowrap; overflow-x: auto; gap: 8px;
+    margin-inline: -16px; padding-inline: 16px; scrollbar-width: none;
+  }
+  .tprompt__run::-webkit-scrollbar { display: none; }
+  .tprompt__run a, .tprompt__run button { min-height: 44px; padding: 8px 14px; font-size: 14px; flex: none; }
+  .tprompt__mark { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .tprompt__mark .seg { display: grid; grid-template-columns: 1fr 1fr; }
+  .seg button { min-height: 44px; font-size: 14px; }
+  .tester__tally { padding: 18px; flex-direction: column; align-items: stretch; }
+  .tester__tally .btn { width: 100%; }
+
+  /* Comparison table becomes one card per row */
+  .vs-wrap { overflow: visible; border: 0; background: none; border-radius: 0; }
+  .vs { min-width: 0; display: block; }
+  .vs thead { display: none; }
+  .vs tbody { display: flex; flex-direction: column; gap: 12px; }
+  .vs tr { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .vs tbody th { display: block; width: auto; padding: 16px 16px 10px; border: 0; font-size: 16px; }
+  .vs td { display: grid; grid-template-columns: 112px 22px minmax(0, 1fr); gap: 10px; align-items: start; padding: 11px 16px; border: 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.45; }
+  .vs td::before { content: attr(data-label); font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+  .vs td.us::before { color: var(--accent); font-weight: 500; }
+  .vs td > .y, .vs td > .n, .vs td > .p { position: static; margin: 0; }
+  .vs tr:last-child td, .vs tr:last-child th { border-bottom: 0; }
+
+  /* Deliverables, steps, timeline */
+  .deliv__item, .step, .attrib__card { padding: 20px; }
+  .step__n { font-size: 44px; }
+  .timeline { grid-template-columns: 1fr; margin-top: 36px; }
+  .timeline li { border-top: 0; border-left: 2px solid var(--line); padding: 0 0 26px 22px; }
+  .timeline li::before { top: 2px; left: -7px; }
+  .timeline li:last-child { padding-bottom: 0; }
+
+  /* Pipeline model */
+  .calc { gap: 14px; }
+  .calc__in, .calc__out { padding: 20px 16px; }
+  .calc .seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 14px; }
+  .calc .seg button { white-space: normal; line-height: 1.25; padding: 8px 4px; border-radius: 10px; font-size: 13px; min-height: 52px; }
+  .range input[type="range"] { min-height: 44px; }
+  .calc__big { font-size: clamp(52px, 16vw, 64px); }
+  .calc__row { gap: 14px 12px; }
+  .calc__row strong { font-size: 18px; }
+
+  /* Fit, promise, founder */
+  .fit { gap: 14px; }
+  .fit__col { padding: 20px 18px; gap: 14px; }
+  .promise { padding: 22px 18px; gap: 22px; border-radius: 18px; }
+  .promise h2 { font-size: 30px; }
+  .founder { padding: 22px 18px; gap: 16px; text-align: left; }
+  .founder__mono { width: 64px; font-size: 26px; }
+  .founder__text blockquote { font-size: 22px; }
+
+  /* FAQ: bigger tap rows */
+  .faq details { padding-block: 4px; }
+  .faq summary { font-size: 17px; min-height: 56px; align-items: center; padding-block: 12px; }
+  .faq details p { margin: 0 0 16px; font-size: 16px; }
+
+  /* Final CTA */
+  .final { gap: 18px; }
+  .final .btn--lg { width: 100%; min-height: 56px; font-size: 17px; padding: 14px 20px; }
+  .final__alt { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* Footer: real tap targets */
+  .site-footer .wrap { flex-direction: column-reverse; gap: 8px; padding-block: 16px 24px; }
+  .site-footer nav { gap: 0 18px; }
+  .site-footer nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
+
+  /* Scorecard */
+  .qrow { padding: 18px 0; gap: 8px 12px; }
+  .qrow__q { font-size: 17px; }
+  .qrow__why { font-size: 14px; }
+  .qrow .seg { grid-column: 1 / -1; justify-self: stretch; display: grid; grid-template-columns: 1fr 1fr 1.5fr; margin-top: 6px; }
+  .qrow .seg button { padding: 8px 6px; }
+  .score {
+    grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px;
+    padding: 10px 12px; border-radius: 16px;
+    bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    margin-inline: -4px;
+  }
+  .score__ring { width: 50px; height: 50px; }
+  .score__ring span { width: 40px; height: 40px; font-size: 15px; }
+  .score__band { font-size: 18px; line-height: 1.15; }
+  .score__sub { display: none; }
+  .score .btn { grid-column: auto; min-height: 44px; padding: 8px 14px; font-size: 14px; }
+  .score .btn .long { display: none; }
+  .score .btn .short { display: inline; }
+  .fixes li { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
+  .fixes li::before { font-size: 30px; }
+
+  /* Booking bar sits above the home indicator */
+  .mbar .btn { min-height: 48px; }
+}
+
+/* Less work for the browser on long pages: skip rendering off-screen sections until needed */
+@supports (content-visibility: auto) {
+  @media (max-width: 860px) {
+    main > .section { content-visibility: auto; contain-intrinsic-size: auto 1200px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header, .menu-btn path, .dots span { transition: none; }
+}
+
+/* Touch-sized controls on tablets too */
+@media (max-width: 860px) {
+  .tprompt__run a, .tprompt__run button, .seg button { min-height: 44px; }
+  .range input[type="range"] { min-height: 44px; }
+  .faq summary { min-height: 52px; align-items: center; }
+  .site-footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .book .textlink, .atlas__cta, .final__alt { display: inline-flex; align-items: center; min-height: 44px; }
+}

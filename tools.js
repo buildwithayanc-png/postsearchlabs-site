@@ -220,7 +220,12 @@
       var nearEnd = window.innerHeight + window.scrollY > document.documentElement.scrollHeight - 140;
       bar.classList.toggle("is-on", past && !nearEnd);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
+    var typing = false;
+    document.addEventListener("focusin", function (e) { if (e.target.matches("input, textarea")) { typing = true; bar.classList.remove("is-on"); } });
+    document.addEventListener("focusout", function () { typing = false; onScroll(); });
+    var base = onScroll;
+    onScroll = function () { if (typing) return; base(); };
+    window.addEventListener("scroll", function () { onScroll(); }, { passive: true });
     onScroll();
   }
 })();
