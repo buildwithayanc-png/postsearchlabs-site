@@ -30,6 +30,7 @@ Typical time to meaningful movement is 60 to 90 days.
 
 - [Home](https://postsearchlabs.com/): The shift to AI shortlists, a free shortlist test, deliverables, comparison with other options, the first 30 days, a pipeline model, how results are measured, fit check and FAQ.
 - [AI Shortlist Scorecard](https://postsearchlabs.com/scorecard.html): A free 12-question self-audit that scores how ready a startup is to be recommended by AI and lists the top fixes.
+- [About PostSearchLabs](https://postsearchlabs.com/about.html): Who we are, why we focus only on B2B SaaS and AI startups, what we do, how we work, and our founder, Ayan Chakraborty.
 
 ## Contact
 

@@ -905,3 +905,8 @@ button, a, summary, input[type="range"] { touch-action: manipulation; -webkit-ta
   .site-footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .book .textlink, .atlas__cta, .final__alt { display: inline-flex; align-items: center; min-height: 44px; }
 }
+
+/* About page */
+.prose--about .lede { max-width: none; }
+.prose--about ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; color: var(--muted); }
+.prose--about li strong, .prose--about p strong { color: var(--ink); }
