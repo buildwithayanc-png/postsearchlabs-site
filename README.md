@@ -1,6 +1,6 @@
 # PostSearchLabs website
 
-Static site for postsearchlabs.com (GitHub Pages). AI search visibility for B2B SaaS and AI startups only.
+Static site for postsearchlabs.com (GitHub Pages). AI search visibility for tech startups only.
 
 - `index.html`: home (hero video, shortlist test, deliverables, comparison table, first 30 days, pipeline model, attribution, fit check, FAQ)
 - `scorecard.html`: free AI Shortlist Scorecard (12-question self-audit)

@@ -17,9 +17,9 @@
   var ENGINES = [["openai", "ChatGPT"], ["googlegemini", "Gemini"], ["perplexity", "Perplexity"], ["claude", "Claude"]];
   var CHIPS = ["Capterra", "G2 reviews", "Alternatives to X", "X vs Y pages", "Pricing pages", "Docs", "Changelogs", "Integrations", "Best-tools listicles", "Press mentions", "Reddit threads", "Case studies"];
   var QUESTIONS = [
-    ["best invoicing tool for freelancers", "Your product"],
+    ["best product analytics tool for startups", "Your product"],
     ["alternatives to [incumbent] for startups", "Your product"],
-    ["best AI note-taker for sales calls", "Your product"]
+    ["best AI coding assistant for dev teams", "Your product"]
   ];
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

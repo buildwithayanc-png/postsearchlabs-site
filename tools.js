@@ -36,7 +36,7 @@
     function prompts() {
       var product = val("product"), cat = val("category"), aud = val("audience"), comp = val("competitor");
       var example = !cat && !aud && !comp && !product;
-      var c = cat || "invoicing software", a = aud || "freelancers", k = comp || "FreshBooks", p = product || "";
+      var c = cat || "product analytics software", a = aud || "early-stage startups", k = comp || "Mixpanel", p = product || "";
       var out = [
         "What's the best " + c + " for " + a + "?",
         "Top " + c + " tools for " + a + " right now, compared",

@@ -1,13 +1,13 @@
 # PostSearchLabs
 
-> PostSearchLabs is an AI search visibility (generative engine optimization, GEO) agency for B2B SaaS and AI startups from seed to Series B, founded by Ayan Chakraborty. We get startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose, and we tie that visibility to signups, demos and pipeline.
+> PostSearchLabs is an AI search visibility (generative engine optimization, GEO) agency for tech startups from seed to Series B, founded by Ayan Chakraborty. We get tech startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which product to choose, and we tie that visibility to signups, demos and pipeline.
 
-Software buyers now build vendor shortlists inside AI assistants before they talk to sales. Each answer names two or three tools. PostSearchLabs works on every signal those assistants rely on (positioning and structured data, comparison and alternatives pages, review platforms, best-tools listicles, communities and docs) so that a startup's product is one of the names. We work only with software startups. We do not guarantee placement in any AI answer; no one honestly can.
+Tech buyers now build shortlists inside AI assistants before they sign up or talk to sales. Each answer names two or three tools. PostSearchLabs works on every signal those assistants rely on (positioning and structured data, comparison and alternatives pages, review platforms, best-tools listicles, communities and docs) so that a startup's product is one of the names. We work only with tech startups. We do not guarantee placement in any AI answer; no one honestly can.
 
 Who we work with:
 
-- B2B SaaS and AI startups, seed to Series B, with a live product and paying customers, competing with larger incumbents for the same buyers.
-- Categories include B2B SaaS, AI tools, vertical SaaS, dev tools, fintech, HR and payroll, and sales and marketing tech.
+- Tech startups, seed to Series B, with a live product and real users or paying customers, competing with larger incumbents for the same buyers.
+- Categories include SaaS, AI products, dev tools, fintech, cybersecurity, data and infrastructure, healthtech, edtech, climate tech, HR tech, and sales and marketing tech.
 
 What an engagement includes:
 
@@ -30,7 +30,7 @@ Typical time to meaningful movement is 60 to 90 days.
 
 - [Home](https://postsearchlabs.com/): The shift to AI shortlists, a free shortlist test, deliverables, comparison with other options, the first 30 days, a pipeline model, how results are measured, fit check and FAQ.
 - [AI Shortlist Scorecard](https://postsearchlabs.com/scorecard.html): A free 12-question self-audit that scores how ready a startup is to be recommended by AI and lists the top fixes.
-- [About PostSearchLabs](https://postsearchlabs.com/about.html): Who we are, why we focus only on B2B SaaS and AI startups, what we do, how we work, and our founder, Ayan Chakraborty.
+- [About PostSearchLabs](https://postsearchlabs.com/about.html): Who we are, why we focus only on tech startups, what we do, how we work, and our founder, Ayan Chakraborty.
 
 ## Contact
 
