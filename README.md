@@ -15,7 +15,7 @@ Static site for postsearchlabs.com (GitHub Pages). AI search visibility for B2B 
 Search the HTML files for `TODO(Ayan)`. Each one marks something only the founder can supply: photo, LinkedIn URL, short bio, legal entity and address, payment and termination terms, and a legal review of `terms.html`.
 
 ## Logo
-The logo is the wordmark in Lexend Bold followed by the P mark, an inline SVG (`.brand__mark`), repeated in the header and footer of every page. The mark sits first in the HTML and CSS moves it to the right. `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` and `logo.png` (used in the schema) are the standalone icon. `og-image.png` carries the full logo. When you replace an icon file, raise the `?v=` number on the icon links in every page, because browsers keep favicons for a long time.
+The logo is the wordmark alone, in Lexend Bold: "PostSearch" in the text colour and "Labs" in blue (`.brand__name` in the header and footer of every page). `og-image.png` carries the same wordmark. The P mark is used only as the icon: `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` and `logo.png` (used in the schema). When you replace an icon file, raise the `?v=` number on the icon links in every page, because browsers keep favicons for a long time.
 
 ## Header and footer
 Every page has the same header and footer. If you change one, change it on all seven pages (`index`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
