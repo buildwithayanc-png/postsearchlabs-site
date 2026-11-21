@@ -13,3 +13,10 @@ Open `site.js` and paste a link inside `VIDEOS.home` (YouTube embed, Vimeo, Loom
 
 ## Booking link
 All "Book a call" buttons point to the Cal.com 30-minute event. The shortlist test and scorecard add the visitor's result to the booking notes.
+
+## Cookie banner
+`consent.js` shows the cookie banner (Accept all / Reject all / Customize) and remembers the choice for 6 months in the `psl_consent` cookie. Every page loads it in the `<head>`, and the "Cookie settings" link in each footer reopens it.
+
+To add a tracking tool, paste its ID into `CONSENT_TOOLS` at the top of `consent.js` (Google Analytics 4, Microsoft Clarity, LinkedIn Insight Tag or Meta Pixel), then raise `CONSENT_VERSION` by 1 so visitors are asked again. The tool loads only after the visitor allows its category. `cookies.html` lists only the tools that have an ID.
+
+For any other script, write it as `<script type="text/plain" data-consent="analytics" src="..."></script>` (or `data-consent="marketing"`). It runs only after consent.
