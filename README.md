@@ -21,7 +21,7 @@ The logo is an inline SVG (`.brand__mark`) plus the wordmark in Lexend Bold, rep
 Every page has the same header and footer. If you change one, change it on all seven pages (`index`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
 
 ## Contact email
-The contact address appears in the footer of every page, the home page final call to action, the About, Privacy, Terms and Cookie pages, the schema in `index.html` and `about.html`, and `llms.txt`. Search for `mailto:` to change it everywhere.
+No contact email is shown yet, because the domain has no mailbox. Once one works, add it back to the footer (Company column) of all seven pages, the home page final call to action, the About, Privacy and Terms pages, the schema in `index.html` and `about.html` (`"email"`), and `llms.txt`.
 
 ## Changing the design
 After editing `styles.css`, change the `?v=` number on the stylesheet link in every page (for example `styles.css?v=20261201`). Browsers keep the old file for 10 minutes otherwise.
