@@ -8,6 +8,8 @@
 (function () {
   var KEY = "psl_theme";
   var root = document.documentElement;
+  // Header starts see-through at the top of the page (motion.js keeps this in sync while scrolling)
+  if (!window.scrollY) root.classList.add("gh-top");
 
   function saved() {
     try {

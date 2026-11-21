@@ -1,5 +1,6 @@
 /*
-  HEADER MENU: the "+" button opens the full-screen menu on tablets and phones.
+  HEADER: the "+" button opens the full-screen menu on tablets and phones,
+  and the bar is see-through over the hero, then solid white.
 */
 (function () {
   var h = document.querySelector(".gh");
@@ -16,6 +17,19 @@
   p.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
   window.addEventListener("resize", function () { if (window.innerWidth >= 1024) set(false); });
+
+  // See-through over the hero, solid white once the hero has scrolled past
+  var root = document.documentElement;
+  var hero = document.querySelector("main > .hero:first-child");
+  var limit = 8;
+  function measure() {
+    limit = hero ? Math.max(8, hero.offsetTop + hero.offsetHeight - h.offsetHeight) : 8;
+  }
+  function update() { root.classList.toggle("gh-top", window.scrollY < limit); }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", function () { measure(); update(); });
+  window.addEventListener("load", function () { measure(); update(); });
+  measure(); update();
 })();
 
 /*

@@ -139,9 +139,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fustat:wght@500;600;700&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@500;600;700&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap"></noscript>
-<script src="theme.js?v=2"></script>
+<script src="theme.js?v=3"></script>
 <link rel="stylesheet" href="styles.css?v=20261122h">
-<link rel="stylesheet" href="goji.css?v=3">
+<link rel="stylesheet" href="goji.css?v=4">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -196,14 +196,17 @@
       </div>
 
       <div class="hero__video">
-        <div class="book">
-          <a class="btn btn--primary btn--lg" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">
-            Book your free share-of-voice call
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-          </a>
-          <p class="book__note">In 30 minutes we run your buyers' real prompts and show you, live, which competitors AI recommends instead of you. You leave with a clear plan, whether you work with us or not.</p>
-          <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No pitch deck</span></p>
-          <a class="textlink" href="tools.html#test">Or run the free shortlist test yourself →</a>
+        <div class="sitebox">
+          <form class="sitebox__form" action="#audit" data-site-form novalidate>
+            <label class="sitebox__field">
+              <span class="sr-only">Your company website</span>
+              <input type="text" name="website" inputmode="url" autocomplete="url" placeholder="https://yourstartup.com" required>
+            </label>
+            <button class="sitebox__btn" type="submit">Check my AI visibility <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></button>
+          </form>
+          <p class="sitebox__hint" data-site-hint hidden>Please enter your website, for example yourstartup.com</p>
+          <p class="sitebox__meta"><span>Free</span> <span>Takes 2 minutes</span> <span>Reply within one business day</span></p>
+          <a class="textlink" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Prefer to talk? Book a 30-minute call →</a>
         </div>
       </div>
 
@@ -374,19 +377,78 @@
     </div>
   </section>
 
-  <!-- Final call to action -->
-  <section class="section band">
+  <!-- AI visibility check: the lead form. leads.js saves it to Supabase (table website_leads). -->
+  <section class="section audit" id="audit">
     <div class="wrap">
-      <div class="final">
-        <p class="kicker">Your free share-of-voice call</p>
-        <h2>Find out what AI tells your buyers about you.</h2>
-        <p class="lede">We'll run the prompts your buyers use and show you, live, which tools get recommended. If AI already names you, we'll tell you. If it doesn't, you'll know exactly why and what to fix.</p>
-        <a class="btn btn--primary btn--lg" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">
-          Book your free 30-minute call
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-        </a>
-        <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No obligation</span></p>
-        <a class="final__alt" href="scorecard.html">Not ready for a call? Take the 3-minute AI Shortlist Scorecard →</a>
+      <div class="audit__grid">
+        <div class="audit__intro">
+          <p class="kicker">Free AI visibility check</p>
+          <h2>Find out what AI tells your buyers about you.</h2>
+          <p class="lede">Tell us a little about your startup. We'll run the prompts your buyers use across ChatGPT, Gemini, Perplexity, Claude and Google AI, and reply by email within one business day.</p>
+          <ul class="audit__list">
+            <li><strong>Where you show up</strong>Which AI assistants mention your product today, and how they describe it.</li>
+            <li><strong>Who gets named instead</strong>The competitors AI recommends when your product is left out.</li>
+            <li><strong>What to fix first</strong>The few changes most likely to get you onto the shortlist.</li>
+          </ul>
+          <a class="audit__call" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Prefer to talk now? Book a 30-minute call →</a>
+        </div>
+
+        <div class="audit__card">
+          <form class="lead" data-lead-form novalidate>
+            <label class="lead__field"><span>Company website</span>
+              <input type="text" name="website" inputmode="url" autocomplete="url" placeholder="https://yourstartup.com" maxlength="300" required>
+            </label>
+            <div class="lead__row">
+              <label class="lead__field"><span>Full name</span>
+                <input type="text" name="full_name" autocomplete="name" maxlength="120" required>
+              </label>
+              <label class="lead__field"><span>Work email</span>
+                <input type="email" name="email" autocomplete="email" placeholder="you@company.com" maxlength="254" required>
+              </label>
+            </div>
+            <div class="lead__row">
+              <label class="lead__field"><span>Your role</span>
+                <select name="role" required>
+                  <option value="" disabled selected>Select your role</option>
+                  <option>Founder / CEO</option>
+                  <option>Co-founder</option>
+                  <option>Marketing or growth lead</option>
+                  <option>Product lead</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label class="lead__field"><span>Company stage</span>
+                <select name="stage" required>
+                  <option value="" disabled selected>Select a stage</option>
+                  <option>Bootstrapped</option>
+                  <option>Pre-seed</option>
+                  <option>Seed</option>
+                  <option>Series A</option>
+                  <option>Series B or later</option>
+                </select>
+              </label>
+            </div>
+            <label class="lead__field"><span>What does your product do? <em>(one line)</em></span>
+              <input type="text" name="product" placeholder="e.g. AI note-taker for sales teams" maxlength="300" required>
+            </label>
+            <label class="lead__field"><span>Main competitors <em>(optional)</em></span>
+              <input type="text" name="competitors" placeholder="2–3 names, if you know them" maxlength="300">
+            </label>
+            <label class="lead__hp" aria-hidden="true">Leave this empty
+              <input type="text" name="company_fax" tabindex="-1" autocomplete="off">
+            </label>
+            <p class="lead__error" role="alert" hidden></p>
+            <button class="lead__submit" type="submit"><span>Get my AI visibility check</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></button>
+            <p class="lead__legal">By submitting, you agree to our <a href="privacy.html">Privacy policy</a>. We only use your details to reply to you.</p>
+          </form>
+
+          <div class="lead__done" tabindex="-1" hidden>
+            <span class="lead__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+            <h3>Thanks, <span data-done-name>there</span>. We've got it.</h3>
+            <p>We'll review <strong data-done-site>your site</strong> and reply to <strong data-done-email>your email</strong> within one business day.</p>
+            <a class="textlink" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Want to talk sooner? Book a 30-minute call →</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -457,6 +519,7 @@
 <script src="site.js?v=20261122e"></script>
 <script src="tools.js" defer></script>
 <script src="atlas.js?v=2" defer></script>
-<script src="motion.js?v=2" defer></script>
+<script src="leads.js?v=1" defer></script>
+<script src="motion.js?v=3" defer></script>
 </body>
 </html>
