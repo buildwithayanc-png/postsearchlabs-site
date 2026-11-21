@@ -2,14 +2,32 @@
 
 Static site for postsearchlabs.com (GitHub Pages). AI search visibility for B2B SaaS and AI startups only.
 
-- `index.html`: home (hero video, shortlist test, deliverables, comparison table, first 30 days, pipeline model, attribution, fit check, FAQ)
+- `index.html`: home (hero, shortlist test, deliverables, comparison table, how it works, pipeline model, attribution, fit check, FAQ)
 - `scorecard.html`: free AI Shortlist Scorecard (12-question self-audit)
+- `about.html`: who we are, founder, contact
+- `privacy.html`, `terms.html`, `cookies.html`: legal pages
 - `tools.js`: shortlist test, pipeline model, scorecard and the phone booking bar. Runs in the browser, sends nothing.
 - `atlas.js`: scroll-driven signal map animation on the home page
+- `consent.js`: cookie banner (see below)
 - `local.html`, `startups.html`: redirects to the home page for old links
 
-## Adding the video
-Open `site.js` and paste a link inside `VIDEOS.home` (YouTube embed, Vimeo, Loom embed or a direct .mp4 link).
+## Open TODOs
+Search the HTML files for `TODO(Ayan)`. Each one marks something only the founder can supply: photo, LinkedIn URL, short bio, legal entity and address, payment and termination terms, and a legal review of `terms.html`.
+
+## Logo
+The logo is an inline SVG (`.brand__mark`) plus the wordmark in Lexend Bold, repeated in the header and footer of every page. `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `logo.png` (used in the schema) and `og-image.png` carry the same mark.
+
+## Header and footer
+Every page has the same header and footer. If you change one, change it on all seven pages (`index`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
+
+## Contact email
+The contact address appears in the footer of every page, the home page final call to action, the About, Privacy, Terms and Cookie pages, the schema in `index.html` and `about.html`, and `llms.txt`. Search for `mailto:` to change it everywhere.
+
+## Changing the design
+After editing `styles.css`, change the `?v=` number on the stylesheet link in every page (for example `styles.css?v=20261201`). Browsers keep the old file for 10 minutes otherwise.
+
+## Adding a video
+The hero video block was removed until there is a real video. `site.js` still supports one: add a `<div class="video" data-video="home">` block back to the hero (see the git history of `index.html`) and paste the link into `VIDEOS.home` in `site.js` (YouTube embed, Vimeo, Loom embed or a direct .mp4 link).
 
 ## Booking link
 All "Book a call" buttons point to the Cal.com 30-minute event. The shortlist test and scorecard add the visitor's result to the booking notes.
@@ -17,6 +35,6 @@ All "Book a call" buttons point to the Cal.com 30-minute event. The shortlist te
 ## Cookie banner
 `consent.js` shows the cookie banner (Accept all / Reject all / Customize) and remembers the choice for 6 months in the `psl_consent` cookie. Every page loads it in the `<head>`, and the "Cookie settings" link in each footer reopens it.
 
-To add a tracking tool, paste its ID into `CONSENT_TOOLS` at the top of `consent.js` (Google Analytics 4, Microsoft Clarity, LinkedIn Insight Tag or Meta Pixel), then raise `CONSENT_VERSION` by 1 so visitors are asked again. The tool loads only after the visitor allows its category. `cookies.html` lists only the tools that have an ID.
+To add a tracking tool, paste its ID into `CONSENT_TOOLS` at the top of `consent.js` (Google Analytics 4, Microsoft Clarity, LinkedIn Insight Tag or Meta Pixel), then raise `CONSENT_VERSION` by 1 so visitors are asked again. The tool loads only after the visitor allows its category. `cookies.html` lists only the tools that have an ID. Name the provider in `privacy.html` too.
 
 For any other script, write it as `<script type="text/plain" data-consent="analytics" src="..."></script>` (or `data-consent="marketing"`). It runs only after consent.

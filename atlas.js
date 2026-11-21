@@ -24,6 +24,7 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduce) root.classList.add("atlas--live");
+  root.classList.add("atlas--ready");
 
   var lines = root.querySelectorAll("[data-beat]");
   var cta = root.querySelector(".atlas__cta");

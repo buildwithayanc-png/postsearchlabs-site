@@ -187,7 +187,7 @@
       });
       var pct = Math.round((got / total) * 100);
       ring.style.setProperty("--p", done ? pct : 0);
-      num.textContent = done ? pct : "–";
+      num.textContent = done ? pct : "";
       if (!done) {
         band.textContent = "Answer the questions to see your score.";
         sub.textContent = "12 questions · about 3 minutes · nothing is sent anywhere";

@@ -12,9 +12,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=20261122">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=20261122b">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -22,8 +22,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./" aria-label="PostSearchLabs home">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
-      <span>PostSearch<em>Labs</em></span>
+      <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+      <span class="brand__name">PostSearch<span>Labs</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
@@ -50,8 +50,12 @@
 
         <p>This policy explains what information PostSearchLabs ("we", "us") handles when you visit postsearchlabs.com or book a call with us. We keep it short because we collect very little.</p>
 
+        <h2>Who we are</h2>
+        <!-- TODO(Ayan): add your registered legal entity name and business address (city, country) to the sentence below. Left out on purpose: not invented. -->
+        <p>PostSearchLabs is an AI search visibility agency founded and run by Ayan Chakraborty. For any privacy question or request, email <a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a>.</p>
+
         <h2>This website</h2>
-        <p>This site has no sign-up forms. Analytics and marketing cookies are only set if you allow them in our cookie banner, and you can change that choice at any time with the "Cookie settings" link at the bottom of every page. Our <a href="cookies.html">cookie policy</a> lists every cookie we can set. The free shortlist test and AI Shortlist Scorecard run entirely in your browser: what you type or select is not sent to us or stored. If you open a prompt in an AI assistant, that assistant's own privacy policy applies. Like every website, our hosting provider (GitHub Pages) processes basic technical data such as your IP address and browser type in order to deliver pages and keep the service secure. Our fonts are served by Google Fonts, which also receives your IP address when the page loads.</p>
+        <p>This site has no sign-up forms. Analytics and marketing cookies are only set if you allow them in our cookie banner, and you can change that choice at any time with the "Cookie settings" link at the bottom of every page. We don't use an analytics provider right now. If we add one, we'll name it in our <a href="cookies.html">cookie policy</a>, which lists every cookie we can set, and it will only load after you allow Analytics. The free shortlist test and AI Shortlist Scorecard run entirely in your browser: what you type or select is not sent to us or stored. If you open a prompt in an AI assistant, that assistant's own privacy policy applies. Like every website, our hosting provider (GitHub Pages) processes basic technical data such as your IP address and browser type in order to deliver pages and keep the service secure. Our fonts are served by Google Fonts, which also receives your IP address when the page loads.</p>
 
         <h2>Booking a call</h2>
         <p>When you book a call, the booking is handled by <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com</a>. You give them your name, email address and anything you choose to write in the booking form, and they share it with us so we can hold the call. We use it only to prepare for and run the call and to follow up with you about it.</p>
@@ -59,14 +63,18 @@
         <h2>Working with us</h2>
         <p>Our work uses your company's public information: your website, docs, review-site profiles, listings and public mentions. Where we set up analytics or form tracking for you, we work in your own accounts and never ask for your customers' personal data.</p>
 
-        <h2>Sharing and retention</h2>
-        <p>We don't sell or rent personal information. We share it only with the services needed to run the business (such as Cal.com and our email provider) or when the law requires it. We keep booking details for as long as we have a business relationship with you, and delete them on request.</p>
+        <h2>Sharing</h2>
+        <p>We don't sell or rent personal information. We share it only with the services needed to run the business (such as Cal.com and our email provider) or when the law requires it.</p>
+
+        <h2>How long we keep it</h2>
+        <!-- TODO(Ayan): if you want a fixed retention period, state it here (for example "for 24 months after our last contact"). -->
+        <p>We keep booking details and emails for as long as we have a business relationship with you, and delete them when you ask us to. Your cookie choice is remembered in your own browser for 6 months.</p>
 
         <h2>Your choices</h2>
-        <p>You can ask us to show, correct or delete the information we hold about you at any time. Mention it on your call or reply to any email from us, and we'll take care of it.</p>
+        <p>You can ask us to show, correct or delete the information we hold about you at any time. Email <a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a>, mention it on your call or reply to any email from us, and we'll take care of it.</p>
 
         <h2>Changes</h2>
-        <p>If we change this policy, we'll update the date at the top of this page.</p>
+        <p>If we change this policy, we'll update the date at the top of this page. Our <a href="terms.html">terms</a> cover how we work with clients.</p>
       </article>
     </div>
   </section>
@@ -77,8 +85,8 @@
     <div class="footer__top">
       <div class="footer__brand">
         <a class="brand" href="./" aria-label="PostSearchLabs home">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--deep-accent)"></path></svg>
-          <span>PostSearch<em>Labs</em></span>
+          <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+          <span class="brand__name">PostSearch<span>Labs</span></span>
         </a>
         <p class="footer__slogan">People stopped searching. <em>They started asking.</em></p>
         <p class="footer__about">We get B2B SaaS and AI startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose.</p>
@@ -97,8 +105,8 @@
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="./#test">AI shortlist test</a></li>
-            <li><a href="scorecard.html">AI Shortlist Scorecard</a></li>
+            <li><a href="./#test">Shortlist test</a></li>
+            <li><a href="scorecard.html">Free scorecard</a></li>
             <li><a href="./#model">Pipeline calculator</a></li>
           </ul>
         </div>
@@ -106,15 +114,16 @@
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="./#compare">Why us</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
+            <li><a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Legal</h2>
           <ul>
-            <li><a href="privacy.html" aria-current="page">Privacy policy</a></li>
+            <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
             <li><a href="cookies.html">Cookie policy</a></li>
             <li><a href="cookies.html" data-cookie-settings>Cookie settings</a></li>
           </ul>

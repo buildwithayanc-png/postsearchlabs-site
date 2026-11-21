@@ -24,6 +24,7 @@
 <meta name="twitter:title" content="About PostSearchLabs">
 <meta name="twitter:description" content="A GEO agency built for one job: getting software startups onto the shortlist AI gives their buyers.">
 <meta name="twitter:image" content="https://postsearchlabs.com/og-image.png">
+<!-- TODO(Ayan): once you share your LinkedIn URL, add  "sameAs": ["https://www.linkedin.com/in/YOUR-HANDLE"]  to the Organization and Person entries in the JSON-LD below. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,17 +36,18 @@
       "name": "About PostSearchLabs",
       "description": "Who PostSearchLabs is, why it exists, who it works with and how it works.",
       "inLanguage": "en",
-      "dateModified": "2026-11-13",
+      "dateModified": "2026-11-22",
       "isPartOf": { "@id": "https://postsearchlabs.com/#website" },
       "about": { "@id": "https://postsearchlabs.com/#org" },
       "mainEntity": { "@id": "https://postsearchlabs.com/#org" }
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://postsearchlabs.com/#org",
       "name": "PostSearchLabs",
       "url": "https://postsearchlabs.com/",
-      "logo": "https://postsearchlabs.com/apple-touch-icon.png",
+      "logo": "https://postsearchlabs.com/logo.png",
+      "email": "hello@postsearchlabs.com",
       "description": "PostSearchLabs is an AI search visibility (generative engine optimization) agency for B2B SaaS and AI startups from seed to Series B.",
       "slogan": "People stopped searching. They started asking.",
       "founder": { "@id": "https://postsearchlabs.com/#founder" },
@@ -55,6 +57,8 @@
       "@type": "Person",
       "@id": "https://postsearchlabs.com/#founder",
       "name": "Ayan Chakraborty",
+      "url": "https://postsearchlabs.com/about.html#founder",
+      "email": "hello@postsearchlabs.com",
       "jobTitle": "Founder",
       "worksFor": { "@id": "https://postsearchlabs.com/#org" },
       "knowsAbout": ["Generative engine optimization", "AI search visibility", "B2B SaaS marketing"]
@@ -79,8 +83,8 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
-<link rel="stylesheet" href="styles.css?v=20261122">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap">
+<link rel="stylesheet" href="styles.css?v=20261122b">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -88,8 +92,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./" aria-label="PostSearchLabs home">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
-      <span>PostSearch<em>Labs</em></span>
+      <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+      <span class="brand__name">PostSearch<span>Labs</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
@@ -142,14 +146,21 @@
           <li><strong>Tied to pipeline.</strong> Visibility only matters if it turns into signups and demos, so that's what we report on.</li>
         </ul>
 
-        <h2>Our founder</h2>
+        <h2 id="founder">Our founder</h2>
+        <!-- TODO(Ayan): add your photo here. Save it as assets/ayan.jpg, then add:
+             <img class="founder__photo" src="assets/ayan.jpg" alt="Ayan Chakraborty, founder of PostSearchLabs" width="132" height="132" loading="lazy"> -->
         <p>PostSearchLabs was founded by <strong>Ayan Chakraborty</strong>, who leads strategy and client work. Ayan started the agency to give software startups a clear, honest view of how AI talks about them, and a plan to change it.</p>
+        <!-- TODO(Ayan): add 2–3 lines here on what you did before PostSearchLabs, plus your LinkedIn link and your city and country. Left out on purpose: these are your facts to write, e.g.
+             <p>Before PostSearchLabs, Ayan ... He is based in CITY, COUNTRY. <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">Ayan on LinkedIn</a></p> -->
+
+        <h2 id="contact">Contact</h2>
+        <p>Email <a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a> or <a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">book a free 30-minute call</a>. You'll hear back from Ayan directly.</p>
 
         <h2>Common questions</h2>
         <p><strong>What is PostSearchLabs?</strong><br>A generative engine optimization (GEO) agency for B2B SaaS and AI startups. We get startups recommended when buyers ask AI which tool to choose, and tie that to pipeline.</p>
         <p><strong>Why only software startups?</strong><br>Software buyers follow a similar path: ask AI for the best tools, compare alternatives, then book demos. Focusing on that one journey lets us go deeper on the prompts, sources and pages that decide it.</p>
         <p><strong>Is GEO the same as SEO?</strong><br>No. SEO gets you ranked in a list of links. GEO gets you named inside the answer a buyer reads. We strengthen both, but measure success by recommendations and pipeline.</p>
-        <p><strong>How long does it take?</strong><br>Expect 60 to 90 days for meaningful movement, measured against your baseline from the first monthly report.</p>
+        <p><strong>How long does it take?</strong><br>The free audit takes the first week. The visibility sprint runs 90 days, and monthly growth work starts in month 4. Expect first meaningful movement in 60 to 90 days, measured against your baseline from the first monthly report.</p>
       </article>
     </div>
   </section>
@@ -163,7 +174,7 @@
           Book your free 30-minute call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
         </a>
-        <p class="book__meta"><span>30 minutes</span><span>Free</span><span>No obligation</span></p>
+        <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No obligation</span></p>
         <a class="final__alt" href="scorecard.html">Not ready for a call? Take the 3-minute AI Shortlist Scorecard →</a>
       </div>
     </div>
@@ -175,8 +186,8 @@
     <div class="footer__top">
       <div class="footer__brand">
         <a class="brand" href="./" aria-label="PostSearchLabs home">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--deep-accent)"></path></svg>
-          <span>PostSearch<em>Labs</em></span>
+          <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+          <span class="brand__name">PostSearch<span>Labs</span></span>
         </a>
         <p class="footer__slogan">People stopped searching. <em>They started asking.</em></p>
         <p class="footer__about">We get B2B SaaS and AI startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose.</p>
@@ -195,8 +206,8 @@
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="./#test">AI shortlist test</a></li>
-            <li><a href="scorecard.html">AI Shortlist Scorecard</a></li>
+            <li><a href="./#test">Shortlist test</a></li>
+            <li><a href="scorecard.html">Free scorecard</a></li>
             <li><a href="./#model">Pipeline calculator</a></li>
           </ul>
         </div>
@@ -204,15 +215,16 @@
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="./#compare">Why us</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
+            <li><a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Legal</h2>
           <ul>
-            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
             <li><a href="cookies.html">Cookie policy</a></li>
             <li><a href="cookies.html" data-cookie-settings>Cookie settings</a></li>
           </ul>

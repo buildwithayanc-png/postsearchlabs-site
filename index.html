@@ -24,16 +24,18 @@
 <meta name="twitter:title" content="PostSearchLabs: Get your startup on the AI shortlist">
 <meta name="twitter:description" content="Your buyers are building a shortlist in ChatGPT. We make your product one of the names it recommends, and tie that visibility to pipeline.">
 <meta name="twitter:image" content="https://postsearchlabs.com/og-image.png">
+<!-- TODO(Ayan): once you share your LinkedIn URL, add  "sameAs": ["https://www.linkedin.com/in/YOUR-HANDLE"]  to the Organization and Person entries in the JSON-LD below. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://postsearchlabs.com/#org",
       "name": "PostSearchLabs",
       "url": "https://postsearchlabs.com/",
-      "logo": "https://postsearchlabs.com/apple-touch-icon.png",
+      "logo": "https://postsearchlabs.com/logo.png",
+      "email": "hello@postsearchlabs.com",
       "image": "https://postsearchlabs.com/og-image.png",
       "description": "PostSearchLabs is an AI search visibility (generative engine optimization) agency for B2B SaaS and AI startups from seed to Series B. We get startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose, and we tie that visibility to signups, demos and pipeline.",
       "slogan": "People stopped searching. They started asking.",
@@ -61,6 +63,8 @@
       "@type": "Person",
       "@id": "https://postsearchlabs.com/#founder",
       "name": "Ayan Chakraborty",
+      "url": "https://postsearchlabs.com/about.html#founder",
+      "email": "hello@postsearchlabs.com",
       "jobTitle": "Founder",
       "worksFor": { "@id": "https://postsearchlabs.com/#org" }
     },
@@ -79,7 +83,7 @@
       "name": "PostSearchLabs: AI search visibility for B2B SaaS & AI startups",
       "isPartOf": { "@id": "https://postsearchlabs.com/#website" },
       "about": { "@id": "https://postsearchlabs.com/#service" },
-      "dateModified": "2026-11-06"
+      "dateModified": "2026-11-22"
     },
     {
       "@type": "FAQPage",
@@ -89,7 +93,7 @@
         { "@type": "Question", "name": "How is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO gets you ranked in a list of links. GEO gets you named inside the answer a buyer reads. They share signals, so we strengthen both, but we measure success by recommendations and pipeline." } },
         { "@type": "Question", "name": "Which AI engines do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and Google AI Mode. We track each one separately because they draw on different sources." } },
         { "@type": "Question", "name": "How do you measure results?", "acceptedAnswer": { "@type": "Answer", "text": "Share of voice across a fixed set of buyer prompts, citation rate per AI engine, AI-referred traffic, and the signups and demos that buyers attribute to an AI assistant." } },
-        { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "Expect 60 to 90 days for meaningful movement. You see progress against your baseline from the first monthly report." } },
+        { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "The free audit takes the first week. The visibility sprint runs 90 days, and monthly growth work starts in month 4. Expect first meaningful movement in 60 to 90 days, measured against your baseline from the first monthly report." } },
         { "@type": "Question", "name": "Can you guarantee ChatGPT will recommend us?", "acceptedAnswer": { "@type": "Answer", "text": "No. No agency can force a model to name a product, and anyone who guarantees the top spot is guessing. We strengthen every signal AI uses to decide and show you the real answers every month so you can judge the change yourself." } },
         { "@type": "Question", "name": "Do you write the content?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We draft, your team approves, and nothing ships without your sign-off." } },
         { "@type": "Question", "name": "We already have an SEO agency or content team. Does this replace them?", "acceptedAnswer": { "@type": "Answer", "text": "No. We work alongside them. We own the AI layer: prompt mapping, citations, comparison pages, structured data and AI attribution, and we hand your team clear briefs for anything they publish." } },
@@ -103,9 +107,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=20261122">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=20261122b">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -113,8 +117,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./" aria-label="PostSearchLabs home">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
-      <span>PostSearch<em>Labs</em></span>
+      <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+      <span class="brand__name">PostSearch<span>Labs</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
@@ -133,7 +137,7 @@
 
 <main>
 
-  <!-- Hero: video first, booking right under it -->
+  <!-- Hero: headline, then booking. (The video block was removed until there is a real video; README explains how to add one.) -->
   <section class="hero">
     <div class="wrap">
       <div class="hero__top">
@@ -143,44 +147,27 @@
       </div>
 
       <div class="hero__video">
-        <div class="video" data-video="home">
-          <div class="video__poster">
-            <div class="video__prompt" aria-hidden="true">
-              <span>› best invoicing tool for freelancers</span>
-              <span>› alternatives to [incumbent]</span>
-            </div>
-            <button class="video__play" type="button" aria-label="Play the overview video">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"></path></svg>
-            </button>
-            <div class="video__meta">
-              <div><strong>How buyers pick software now</strong>Ayan Chakraborty, Founder</div>
-              <span>Watch first, then book a call</span>
-            </div>
-          </div>
-          <p class="video__note" hidden>The video is on its way. Book a call below and we'll walk you through it live.</p>
-        </div>
-
         <div class="book">
           <a class="btn btn--primary btn--lg" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">
             Book your free share-of-voice call
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
           </a>
           <p class="book__note">In 30 minutes we run your buyers' real prompts and show you, live, which competitors AI recommends instead of you. You leave with a clear plan, whether you work with us or not.</p>
-          <p class="book__meta"><span>30 minutes</span><span>Free</span><span>No pitch deck</span></p>
+          <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No pitch deck</span></p>
           <a class="textlink" href="#test">Or run the shortlist test yourself first ↓</a>
         </div>
       </div>
 
       <div class="engines">
         <p class="engines__label">Tracked separately on every engine your buyers use</p>
-        <div class="engines__row">
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"></path></svg>ChatGPT</span>
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"></path></svg>Gemini</span>
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"></path></svg>Perplexity</span>
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></svg>Claude</span>
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path></svg>AI Overviews</span>
-          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path></svg>AI Mode</span>
-        </div>
+        <ul class="engines__row">
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"></path></svg>ChatGPT</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"></path></svg>Gemini</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"></path></svg>Perplexity</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></svg>Claude</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path></svg>Google AI Overviews</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path></svg>Google AI Mode</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -502,18 +489,21 @@
           <p>We map your buyers' prompts, run them across the major AI engines and show who gets recommended instead of you.</p>
         </div>
         <div class="step">
-          <div class="step__top"><span class="step__n">2</span><span class="step__time">Days 1–90</span></div>
-          <h3>Visibility sprint</h3>
+          <div class="step__top"><span class="step__n">2</span><span class="step__time">90 days</span></div>
+          <h3>90-day visibility sprint</h3>
           <p>We sharpen your positioning and structured data, ship comparison pages and start earning the citations AI trusts.</p>
         </div>
         <div class="step">
-          <div class="step__top"><span class="step__n">3</span><span class="step__time">Month 4 onward</span></div>
+          <div class="step__top"><span class="step__n">3</span><span class="step__time">From month 4</span></div>
           <h3>Monthly growth</h3>
           <p>Ongoing content and citations, with a monthly view of share of voice, AI-referred traffic and pipeline.</p>
         </div>
       </div>
 
-      <ol class="timeline" aria-label="Your first 30 days">
+      <p class="steps__note">First meaningful movement typically shows within 60–90 days.</p>
+
+      <p class="kicker timeline__label">Inside the sprint: your first 30 days</p>
+      <ol class="timeline" aria-label="Your first 30 days of the sprint">
         <li>
           <span class="timeline__day">Day 1</span>
           <h3>Kickoff</h3>
@@ -575,8 +565,9 @@
           <div class="calc__row">
             <div><strong data-res="demos">+8</strong><span>extra demos a month</span></div>
             <div><strong data-res="cust">+19</strong><span>new customers a year</span></div>
-            <div><strong data-res="pipe">$1.15M</strong><span>pipeline created a year</span></div>
+            <div><strong data-res="pipe">$1.15M</strong><span>pipeline value a year <small>(extra demos × ACV, before close rate)</small></span></div>
           </div>
+          <p class="calc__fine">Pipeline value counts every extra demo at full contract value. New ARR is the part of it that closes, at your demo-to-customer rate.</p>
           <p class="calc__fine">A model, not a forecast or a promise. On your call we replace these assumptions with your real prompts, your share of voice and your funnel data.</p>
         </div>
       </div>
@@ -600,7 +591,7 @@
         <div class="attrib__card">
           <h3>2. AI referrer tracking</h3>
           <p>We set up your analytics to separate visits that arrive from AI assistants, and tag the links we can control.</p>
-          <p class="attrib__code">chatgpt.com · perplexity.ai · gemini.google.com · claude.ai · copilot.microsoft.com</p>
+          <p class="attrib__code">chatgpt.com · perplexity.ai · gemini.google.com · claude.ai</p>
         </div>
         <div class="attrib__card">
           <h3>3. Self-reported source</h3>
@@ -666,11 +657,13 @@
   <!-- Founder -->
   <section class="section section--line">
     <div class="wrap">
-      <div class="founder">
-        <div class="founder__mono" aria-hidden="true">AC</div>
+      <!-- TODO(Ayan): add your photo. Save it as assets/ayan.jpg, then add this line as the first thing inside the div below and delete the "founder--nophoto" class:
+           <img class="founder__photo" src="assets/ayan.jpg" alt="Ayan Chakraborty, founder of PostSearchLabs" width="132" height="132" loading="lazy"> -->
+      <div class="founder founder--nophoto">
         <div class="founder__text">
           <p class="kicker">Founder-led</p>
           <blockquote>"Startups don't lose to incumbents on product anymore. They lose in the answer. I started PostSearchLabs to fix that, and you'll work with me directly."</blockquote>
+          <!-- TODO(Ayan): link your name to LinkedIn, e.g. <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">Ayan Chakraborty</a> -->
           <p class="founder__by">Ayan Chakraborty, Founder, PostSearchLabs</p>
         </div>
       </div>
@@ -703,7 +696,7 @@
         </details>
         <details>
           <summary>How long does it take?</summary>
-          <p>Expect 60 to 90 days for meaningful movement. You see progress against your baseline from the first monthly report.</p>
+          <p>The free audit takes the first week. The visibility sprint runs 90 days, and monthly growth work starts in month 4. Expect first meaningful movement in 60 to 90 days, measured against your baseline from the first monthly report.</p>
         </details>
         <details>
           <summary>Can you guarantee ChatGPT will recommend us?</summary>
@@ -744,8 +737,9 @@
           Book your free 30-minute call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
         </a>
-        <p class="book__meta"><span>30 minutes</span><span>Free</span><span>No obligation</span></p>
+        <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No obligation</span></p>
         <a class="final__alt" href="scorecard.html">Not ready for a call? Take the 3-minute AI Shortlist Scorecard →</a>
+        <p class="final__contact">Prefer email? <a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a></p>
       </div>
     </div>
   </section>
@@ -757,8 +751,8 @@
     <div class="footer__top">
       <div class="footer__brand">
         <a class="brand" href="./" aria-label="PostSearchLabs home">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--deep-accent)"></path></svg>
-          <span>PostSearch<em>Labs</em></span>
+          <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+          <span class="brand__name">PostSearch<span>Labs</span></span>
         </a>
         <p class="footer__slogan">People stopped searching. <em>They started asking.</em></p>
         <p class="footer__about">We get B2B SaaS and AI startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose.</p>
@@ -777,8 +771,8 @@
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="#test">AI shortlist test</a></li>
-            <li><a href="scorecard.html">AI Shortlist Scorecard</a></li>
+            <li><a href="#test">Shortlist test</a></li>
+            <li><a href="scorecard.html">Free scorecard</a></li>
             <li><a href="#model">Pipeline calculator</a></li>
           </ul>
         </div>
@@ -786,15 +780,16 @@
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="#compare">Why us</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
+            <li><a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Legal</h2>
           <ul>
-            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
             <li><a href="cookies.html">Cookie policy</a></li>
             <li><a href="cookies.html" data-cookie-settings>Cookie settings</a></li>
           </ul>

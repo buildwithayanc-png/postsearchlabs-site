@@ -59,9 +59,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=20261122">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=20261122b">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -69,8 +69,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./" aria-label="PostSearchLabs home">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--accent)"></path></svg>
-      <span>PostSearch<em>Labs</em></span>
+      <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+      <span class="brand__name">PostSearch<span>Labs</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
@@ -94,7 +94,7 @@
         <p class="eyebrow">Free tool · B2B SaaS &amp; AI startups · 3 minutes</p>
         <h1>The AI Shortlist <span class="hl">Scorecard.</span></h1>
         <p class="lede">Twelve questions about the signals ChatGPT, Gemini, Perplexity, Claude and Google AI rely on before they recommend a tool. Answer honestly, get a score out of 100 and the fixes that matter most for your startup.</p>
-        <p class="book__meta"><span>No email needed</span><span>Runs in your browser</span><span>Nothing is sent anywhere</span></p>
+        <p class="book__meta"><span>No email needed</span> <span>Runs in your browser</span> <span>Nothing is sent anywhere</span></p>
       </div>
     </div>
   </section>
@@ -169,7 +169,7 @@
           <p class="qrow__why">Price is one of the first things buyers ask AI. Hidden pricing gets you dropped or misquoted.</p>
         </div>
 
-        <div class="qrow" data-w="6" data-fix-title="Start tracking AI-sourced signups" data-fix="Separate AI referrers (chatgpt.com, perplexity.ai, gemini.google.com, claude.ai, copilot.microsoft.com) in analytics, and add &quot;How did you hear about us?&quot; with an AI option to your signup and demo forms.">
+        <div class="qrow" data-w="6" data-fix-title="Start tracking AI-sourced signups" data-fix="Separate AI referrers (chatgpt.com, perplexity.ai, gemini.google.com, claude.ai) in analytics, and add &quot;How did you hear about us?&quot; with an AI option to your signup and demo forms.">
           <span class="qrow__n">12</span>
           <p class="qrow__q">Can you see signups and demos that came from AI assistants, in analytics or a "How did you hear about us?" field?</p>
           <p class="qrow__why">If you can't measure it, you can't defend the budget, or notice when a competitor overtakes you.</p>
@@ -178,12 +178,12 @@
       </div>
 
       <div class="score" aria-live="polite">
-        <div class="score__ring" data-score-ring><span data-score-num>–</span></div>
+        <div class="score__ring" data-score-ring><span data-score-num></span></div>
         <div>
           <p class="score__band" data-score-band>Answer the questions to see your score.</p>
           <p class="score__sub" data-score-sub>12 questions · about 3 minutes · nothing is sent anywhere</p>
         </div>
-        <a class="btn btn--primary" data-score-cta href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener"><span class="long">Review my score on a call</span><span class="short">Book a call</span></a>
+        <a class="btn btn--primary" data-score-cta href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener"><span class="long">Review my score on a call</span> <span class="short">Book a call</span></a>
       </div>
 
       <div class="fixes" data-fixes hidden>
@@ -204,7 +204,7 @@
           Book your free share-of-voice call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
         </a>
-        <p class="book__meta"><span>30 minutes</span><span>Free</span><span>No obligation</span></p>
+        <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No obligation</span></p>
       </div>
     </div>
   </section>
@@ -215,8 +215,8 @@
     <div class="footer__top">
       <div class="footer__brand">
         <a class="brand" href="./" aria-label="PostSearchLabs home">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="M16.5 16.5L23 23"></path><path d="M7.5 11h7" style="stroke: var(--deep-accent)"></path></svg>
-          <span>PostSearch<em>Labs</em></span>
+          <svg class="brand__mark" viewBox="0 0 181 210" aria-hidden="true"><path fill="#005BFF" d="M5 0h95a80 80 0 0 1 0 160H90c-11 0-19 5-22 14l-7 16c-4 12-12 20-25 20H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"></path><g fill="none" stroke="#fff"><circle cx="89.5" cy="80.5" r="45" stroke-width="14.5"></circle><path stroke-width="14" d="M58.6 113.3 45.6 127.1"></path><path stroke-width="21" stroke-linecap="round" d="M40.8 132.2 25.4 148.6"></path></g><g fill="#fff"><rect x="67" y="86" width="11.5" height="16" rx="1.5"></rect><rect x="83" y="74" width="12" height="28" rx="1.5"></rect><rect x="100" y="61" width="12" height="41" rx="1.5"></rect></g></svg>
+          <span class="brand__name">PostSearch<span>Labs</span></span>
         </a>
         <p class="footer__slogan">People stopped searching. <em>They started asking.</em></p>
         <p class="footer__about">We get B2B SaaS and AI startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose.</p>
@@ -235,8 +235,8 @@
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="./#test">AI shortlist test</a></li>
-            <li><a href="scorecard.html" aria-current="page">AI Shortlist Scorecard</a></li>
+            <li><a href="./#test">Shortlist test</a></li>
+            <li><a href="scorecard.html" aria-current="page">Free scorecard</a></li>
             <li><a href="./#model">Pipeline calculator</a></li>
           </ul>
         </div>
@@ -244,15 +244,16 @@
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="./#compare">Why us</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
+            <li><a href="mailto:hello@postsearchlabs.com">hello@postsearchlabs.com</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Legal</h2>
           <ul>
-            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
             <li><a href="cookies.html">Cookie policy</a></li>
             <li><a href="cookies.html" data-cookie-settings>Cookie settings</a></li>
           </ul>
