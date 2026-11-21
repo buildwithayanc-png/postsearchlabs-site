@@ -1,0 +1,325 @@
+/* ==========================================================================
+   PostSearchLabs: "warm product" theme layer
+   Loads AFTER styles.css and only overrides it. Delete this file's <link>
+   to go back to the old look instantly.
+   Look: white canvas, warm peach hero glow, near-black pill buttons,
+   one coral accent, big tight Fustat headings, soft rounded cards.
+   ========================================================================== */
+
+:root,
+:root:not([data-theme="dark"]) {   /* light by default, even if the visitor's OS is dark */
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --ink: #0A0A0A;
+  --muted: #5E5E5E;
+  --line: #EAEAEA;
+  --accent: #F2542D;          /* coral: kickers, numbers, highlights */
+  --brand-text: #F2542D;
+  --accent-hover: #D9431E;
+  --on-accent: #FFFFFF;
+  --btn: #0A0A0A;             /* primary buttons are near-black */
+  --btn-hover: #262626;
+  --mark: rgba(255, 183, 150, 0.75);
+  --deep: #0A0A0A;
+  --deep-2: #141414;
+  --on-deep: #FAFAFA;
+  --on-deep-muted: #A3A3A3;
+  --deep-line: #262626;
+  --deep-accent: #FF8A65;
+  --shadow: rgba(10, 10, 10, 0.18);
+  --display: "Fustat", "Geist", "Helvetica Neue", Arial, sans-serif;
+  --radius: 16px;
+  --glow: #FFE3D6;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0A0A0A;
+  --surface: #141414;
+  --ink: #FAFAFA;
+  --muted: #A3A3A3;
+  --line: #262626;
+  --accent: #FF7A54;
+  --brand-text: #FF7A54;
+  --accent-hover: #FF9775;
+  --on-accent: #0A0A0A;
+  --btn: #FAFAFA;
+  --btn-hover: #E5E5E5;
+  --mark: rgba(242, 84, 45, 0.35);
+  --deep: #000000;
+  --deep-2: #0F0F0F;
+  --deep-line: #222222;
+  --deep-accent: #FF8A65;
+  --glow: rgba(242, 84, 45, 0.18);
+}
+
+/* Day/night toggle icons follow the light default */
+:root:not([data-theme="dark"]) [data-theme-toggle] .when-dark { display: none; }
+:root:not([data-theme="dark"]) [data-theme-toggle] .when-light { display: inline; }
+
+/* ---------- Type ---------- */
+h1, h2,
+.cols--strong h3,
+.stat__num,
+.step__n,
+.atlas h2, .atlas__say,
+.fork h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+h1 { line-height: 1.02; }
+h2 { line-height: 1.06; }
+h1 em, h2 em { font-style: normal; color: var(--accent); }
+h3 { letter-spacing: -0.02em; }
+
+.kicker { color: var(--accent); }
+
+/* ---------- Buttons: near-black pills ---------- */
+.btn--primary,
+.nav .btn,
+.site-footer .footer__cta {
+  background: var(--btn);
+  color: var(--on-accent);
+  box-shadow: 0 1px 0 rgba(255,255,255,.12) inset, 0 8px 20px -10px var(--shadow);
+}
+:root[data-theme="dark"] .btn--primary,
+:root[data-theme="dark"] .nav .btn { color: #0A0A0A; }
+.btn--primary:hover,
+.nav .btn:hover { background: var(--btn-hover); color: var(--on-accent); }
+:root[data-theme="dark"] .btn--primary:hover { color: #0A0A0A; }
+.band .btn--primary,
+.site-footer .footer__cta { background: #FFFFFF; color: #0A0A0A; }
+.band .btn--primary:hover,
+.site-footer .footer__cta:hover { background: #F0F0F0; color: #0A0A0A; }
+.btn--ghost { background: var(--surface); border-color: var(--line); }
+.btn--ghost:hover { border-color: var(--ink); }
+
+/* ---------- Header: light, blurred ---------- */
+.site-header {
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom-color: transparent;
+}
+.brand__name span { color: var(--accent); }
+
+/* ---------- Hero: warm peach glow ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero::before {               /* the glow */
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto;
+  height: 120%;
+  z-index: -1;
+  background:
+    radial-gradient(60% 55% at 50% 0%, var(--glow) 0%, transparent 70%),
+    radial-gradient(35% 40% at 15% 10%, color-mix(in srgb, var(--accent) 14%, transparent) 0%, transparent 70%),
+    radial-gradient(35% 40% at 85% 10%, color-mix(in srgb, #FFB199 30%, transparent) 0%, transparent 70%);
+}
+.hero::after {                /* faint grid, fades out downward */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--accent) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 9%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 20%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(70% 60% at 50% 20%, #000 0%, transparent 75%);
+}
+
+/* Eyebrow becomes a bracketed badge */
+.hero .eyebrow {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  border-radius: 6px;
+  --c: var(--accent);
+  background-image:
+    linear-gradient(var(--c),var(--c)), linear-gradient(var(--c),var(--c)),
+    linear-gradient(var(--c),var(--c)), linear-gradient(var(--c),var(--c)),
+    linear-gradient(var(--c),var(--c)), linear-gradient(var(--c),var(--c)),
+    linear-gradient(var(--c),var(--c)), linear-gradient(var(--c),var(--c));
+  background-repeat: no-repeat;
+  background-size: 10px 1.5px, 1.5px 10px, 10px 1.5px, 1.5px 10px,
+                   10px 1.5px, 1.5px 10px, 10px 1.5px, 1.5px 10px;
+  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+}
+.hero h1 { max-width: 15ch; }
+.hl {
+  background-image: none;
+  color: var(--accent);
+  padding-inline: 0;
+}
+
+/* CTA block sits on a soft card, like a product input */
+.hero .book {
+  max-width: 620px;
+  margin-inline: auto;
+  padding: 28px 28px 22px;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px -30px var(--shadow), 0 1px 0 rgba(255,255,255,.6) inset;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.book__meta span::before { color: var(--accent); }
+
+/* Engine chips → logo strip */
+.engines__label { color: var(--muted); }
+.engines__row li {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 4px 14px -10px var(--shadow);
+}
+
+/* ---------- Dark bands → pure black ---------- */
+.atlas { background: #0A0A0A; --atlas-mark: rgba(242, 84, 45, 0.45); }
+.atlas .kicker { color: var(--deep-accent); }
+.atlas__card {
+  background: rgba(20, 20, 20, 0.92);
+  border-color: #262626;
+  box-shadow: 0 30px 80px -30px rgba(242, 84, 45, 0.45);
+}
+
+.band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.band::before {               /* coral glow in the corner of dark bands */
+  content: "";
+  position: absolute;
+  inset: auto -20% -60% auto;
+  width: 70%;
+  aspect-ratio: 1;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(242, 84, 45, 0.22), transparent);
+}
+
+/* Stats */
+.stat__num { color: #FFFFFF; word-spacing: -0.12em; }
+.stats > div {
+  padding: 28px;
+  border: 1px solid var(--deep-line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+}
+
+/* ---------- Cards everywhere ---------- */
+.cols--strong { gap: 16px; }
+.cols--strong .col,
+.col {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 12px 30px -24px var(--shadow);
+}
+.cols--strong .col { border-top: 1px solid var(--line); position: relative; overflow: hidden; }
+.cols--strong .col::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), #FFB199);
+}
+
+.step,
+.explore__card {
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px -24px var(--shadow);
+}
+.step__n {
+  display: inline-grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  font-size: 22px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  border-radius: 14px;
+}
+.step__time {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.explore__card { transition: border-color .2s, transform .2s, box-shadow .2s; }
+.explore__card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -24px var(--shadow);
+}
+.explore__tag {
+  align-self: flex-start;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+/* Alternating soft sections instead of hard rules */
+.section--line { border-top: 0; }
+#how { background: linear-gradient(180deg, #FAFAFA, var(--bg)); }
+:root[data-theme="dark"] #how { background: linear-gradient(180deg, #111, var(--bg)); }
+
+/* Final CTA band */
+.final h2 { max-width: 16ch; }
+
+/* Footer */
+.site-footer .brand__name span { color: var(--deep-accent); }
+
+/* ---------- Motion (motion.js adds the classes) ---------- */
+.js-motion .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--d, 0s);
+}
+.js-motion .reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js-motion .reveal { opacity: 1; transform: none; transition: none; }
+  .explore__card:hover { transform: none; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .hero .book { padding: 20px 16px 16px; border-radius: 18px; }
+  .cols--strong .col, .col, .stats > div { padding: 20px; }
+  .hero .eyebrow { font-size: 11px; padding: 7px 12px; }
+}
+
+/* ---------- Cookie banner: light card like the rest of the site ---------- */
+.cc {
+  background: #FFFFFF; color: #0A0A0A;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 30px 80px -24px rgba(10,10,10,.25);
+}
+.cc__title, .cc__opt strong, .cc__text a { color: #0A0A0A; }
+.cc__text, .cc__opt small { color: #5E5E5E; }
+.cc__text a:hover { color: var(--accent); }
+.cc__prefs, .cc__opt { border-color: #EAEAEA; }
+.cc__always { color: var(--accent); }
+.cc__switch { background: #EAEAEA; border-color: #D4D4D4; }
+.cc__switch:checked { background: #0A0A0A; border-color: #0A0A0A; }
+.cc__switch:checked::after { background: #FFFFFF; }
+.cc__switch:focus-visible, .cc__btn:focus-visible { outline-color: var(--accent); }
+.cc__btn { border-radius: 999px; }
+.cc__btn--light { background: #0A0A0A; color: #FFFFFF; }
+.cc__btn--light:hover { background: #262626; }
+.cc__btn--dark { background: #F5F5F5; color: #0A0A0A; border-color: #EAEAEA; }
+.cc__btn--dark:hover { border-color: #0A0A0A; }
+.cc__btn--dark.is-save { background: #0A0A0A; color: #FFFFFF; border-color: #0A0A0A; }
+.cc__btn--dark.is-save:hover { background: #262626; border-color: #262626; }
+:root[data-theme="dark"] .cc { background: #141414; color: #FAFAFA; border-color: #262626; }
+:root[data-theme="dark"] .cc__title, :root[data-theme="dark"] .cc__opt strong, :root[data-theme="dark"] .cc__text a { color: #FAFAFA; }
+:root[data-theme="dark"] .cc__btn--light { background: #FAFAFA; color: #0A0A0A; }
+:root[data-theme="dark"] .cc__btn--dark { background: #0A0A0A; color: #FAFAFA; border-color: #262626; }

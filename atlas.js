@@ -56,7 +56,7 @@
 
   var W = 0, H = 0, dpr = 1, cx = 0, cy = 0, RX = 1, RY = 1, mobile = false;
   var nodes = [], links = [], pulses = [];
-  var hub = { X: 0, Y: 0, a: 1, color: "#9AA4FF" };
+  var hub = { X: 0, Y: 0, a: 1, color: "#FF8A65" };
   var pointer = { x: 0, y: 0, tx: 0, ty: 0, px: -9999, py: -9999 };
 
   function metric(x, y) {
@@ -91,9 +91,9 @@
     g.scale(dpr, dpr);
     g.beginPath();
     if (g.roundRect) g.roundRect(1, 1, w, h, 14); else g.rect(1, 1, w, h);
-    g.fillStyle = "rgba(18, 23, 41, 0.92)";
+    g.fillStyle = "rgba(20, 20, 20, 0.92)";
     g.fill();
-    g.strokeStyle = "rgba(154, 164, 255, 0.34)";
+    g.strokeStyle = "rgba(255, 138, 101, 0.34)";
     g.stroke();
     g.fillStyle = color;
     g.font = font;
@@ -149,10 +149,10 @@
         n.s = logoSprite(n.icon, size, n.soft);
         n.color = n.icon.c; n.base = n.soft ? 0.34 : 0.95;
       } else if (n.kind === "chip") {
-        n.s = chipSprite(n.text, "#C9CEE0");
-        n.color = "#9AA4FF"; n.base = 0.92;
+        n.s = chipSprite(n.text, "#D4D4D4");
+        n.color = "#FF8A65"; n.base = 0.92;
       } else {
-        n.r = 0.8 + n.z * 1.5; n.color = "#AEB5FF"; n.base = 0.28 + n.z * 0.45;
+        n.r = 0.8 + n.z * 1.5; n.color = "#FFB199"; n.base = 0.28 + n.z * 0.45;
       }
       n.adj = []; n.next = null;
       nodes.push(n);
@@ -239,8 +239,8 @@
     var a = 0.07 + 0.17 * smooth(0.28, 0.7, p);
     var r = Math.max(RX, RY) * (mobile ? 1.1 : 1.35);
     var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
-    g.addColorStop(0, "rgba(72, 88, 255, " + a.toFixed(3) + ")");
-    g.addColorStop(1, "rgba(72, 88, 255, 0)");
+    g.addColorStop(0, "rgba(242, 84, 45, " + a.toFixed(3) + ")");
+    g.addColorStop(1, "rgba(242, 84, 45, 0)");
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, W, H);
   }
@@ -250,7 +250,7 @@
     for (var i = 0; i < links.length; i++) {
       var a = links[i][0], b = links[i][1], o = Math.min(a.a, b.a);
       if (o < 0.02) continue;
-      ctx.strokeStyle = "rgba(190, 198, 235, " + (o * (0.13 + Math.max(a.glow, b.glow) * 0.3)).toFixed(3) + ")";
+      ctx.strokeStyle = "rgba(235, 222, 214, " + (o * (0.13 + Math.max(a.glow, b.glow) * 0.3)).toFixed(3) + ")";
       ctx.beginPath();
       ctx.moveTo(a.X, a.Y);
       ctx.lineTo(b.X, b.Y);
@@ -281,7 +281,7 @@
     if (pulses.length < 90 && Math.random() < rate * dt) {
       var from = nodes[Math.floor(Math.random() * nodes.length)];
       if (!from.stay && from.a > 0.1) {
-        pulses.push({ a: from, b: from.next || hub, k: 0, v: 0.0009 + Math.random() * 0.0009, color: from.kind === "dot" ? "#C9CEFF" : from.color });
+        pulses.push({ a: from, b: from.next || hub, k: 0, v: 0.0009 + Math.random() * 0.0009, color: from.kind === "dot" ? "#FFD3C2" : from.color });
       }
     }
     ctx.globalCompositeOperation = "lighter";

@@ -1,14 +1,13 @@
 /*
   DAY / NIGHT MODE
   Loaded in the <head> of every page so the saved choice applies before the page paints.
-  Until a visitor clicks the toggle, the site follows their device setting.
+  The site is light by default (new look). Night mode only turns on when a visitor clicks the toggle.
   The choice is kept in the browser (localStorage "psl_theme"); nothing is sent anywhere.
   Any element with [data-theme-toggle] switches the mode.
 */
 (function () {
   var KEY = "psl_theme";
   var root = document.documentElement;
-  var system = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
   function saved() {
     try {
@@ -17,7 +16,7 @@
     } catch (e) { return null; }
   }
   function current() {
-    return root.getAttribute("data-theme") || (system && system.matches ? "dark" : "light");
+    return root.getAttribute("data-theme") || "light";
   }
 
   var choice = saved();
@@ -42,7 +41,6 @@
   document.addEventListener("click", function (e) {
     if (e.target.closest && e.target.closest("[data-theme-toggle]")) toggle();
   });
-  if (system && system.addEventListener) system.addEventListener("change", sync);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sync);
   else sync();
 
