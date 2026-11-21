@@ -759,6 +759,39 @@ button.btn { cursor: pointer; }
 /* Header menu */
 .nav__links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; }
 .menu-btn { display: none; }
+
+/* Day / night toggle (theme.js). Icon button in the header; on phones it is a row in the menu. */
+.theme-btn {
+  display: inline-grid; place-items: center; flex: none;
+  width: 44px; height: 44px; padding: 0; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+.theme-btn svg, .theme-row svg { width: 20px; height: 20px; flex: none; }
+.theme-row { display: none; }
+[data-theme-toggle] .when-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-theme-toggle] .when-dark { display: inline; }
+  :root:not([data-theme="light"]) [data-theme-toggle] .when-light { display: none; }
+}
+:root[data-theme="dark"] [data-theme-toggle] .when-dark { display: inline; }
+:root[data-theme="dark"] [data-theme-toggle] .when-light { display: none; }
+@media (max-width: 860px) {
+  .theme-btn { border-radius: 12px; }
+}
+@media (max-width: 480px) {
+  .theme-btn { display: none; }
+  .theme-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    width: 100%; min-height: 52px; padding: 0; border: 0; background: none;
+    font: 500 18px/1.2 var(--body); color: var(--ink); text-align: left; cursor: pointer;
+  }
+  .theme-row svg { color: var(--accent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-btn { transition: none; }
+}
 button, a, summary, input[type="range"] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 [id] { scroll-margin-top: 84px; }
 

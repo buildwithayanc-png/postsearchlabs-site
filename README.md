@@ -29,6 +29,9 @@ After editing `styles.css`, change the `?v=` number on the stylesheet link in ev
 ## Adding a video
 The hero video block was removed until there is a real video. `site.js` still supports one: add a `<div class="video" data-video="home">` block back to the hero (see the git history of `index.html`) and paste the link into `VIDEOS.home` in `site.js` (YouTube embed, Vimeo, Loom embed or a direct .mp4 link).
 
+## Day / night mode
+`theme.js` runs in the `<head>` of every page. The site follows the visitor's device setting until they click the toggle (the sun/moon button in the header, or the "Night mode" row in the phone menu). Their choice is saved in the browser as `psl_theme`. Any element with `data-theme-toggle` works as a toggle. Dark colours live in `styles.css` under `:root[data-theme="dark"]`.
+
 ## Booking link
 All "Book a call" buttons point to the Cal.com 30-minute event. The shortlist test and scorecard add the visitor's result to the booking notes.
 
