@@ -543,6 +543,30 @@ h3 { font-family: var(--body); font-size: 20px; line-height: 1.3; font-weight: 6
 .engines__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; margin: 0; padding: 0; }
 .engines__row li { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
 .engines__row svg { width: 16px; height: 16px; flex: none; }
+/* Engine pills light up in each tool's own brand colour on hover */
+.engines__row li { --c: var(--accent); transition: border-color 0.2s, background-color 0.2s; }
+.engines__row svg { transition: color 0.2s; }
+.engines__row svg path { transition: fill 0.2s, opacity 0.2s; }
+.engines__row [data-engine="chatgpt"] { --c: #10A37F; }
+.engines__row [data-engine="gemini"] { --c: #6F8BEB; }
+.engines__row [data-engine="perplexity"] { --c: #20808D; }
+.engines__row [data-engine="claude"] { --c: #D97757; }
+.engines__row [data-engine="google"] { --c: #4285F4; }
+.engines__row .engine__color { opacity: 0; }
+.engines__row li:hover { border-color: color-mix(in srgb, var(--c) 60%, var(--line)); background: color-mix(in srgb, var(--c) 9%, var(--surface)); }
+.engines__row li:hover svg { color: var(--c); }
+.engines__row li:hover .engine__color { opacity: 1; }
+.engines__row li:hover .g-b { fill: #4285F4; }
+.engines__row li:hover .g-g { fill: #34A853; }
+.engines__row li:hover .g-y { fill: #FBBC05; }
+.engines__row li:hover .g-r { fill: #EA4335; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .engines__row [data-engine="perplexity"] { --c: #20B8CD; }
+}
+:root[data-theme="dark"] .engines__row [data-engine="perplexity"] { --c: #20B8CD; }
+@media (prefers-reduced-motion: reduce) {
+  .engines__row li, .engines__row svg, .engines__row svg path { transition: none; }
+}
 
 /* Form controls (shared by the tester, calculator and scorecard) */
 .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
