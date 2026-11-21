@@ -369,16 +369,6 @@ h3 { font-size: 18px; line-height: 1.3; }
 .brand { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.04em; }
 .site-footer .brand { font-size: 24px; }
 
-/* ---------- Header: quick links on desktop, slimmer controls ---------- */
-.quick { display: none; }
-@media (min-width: 1024px) {
-  .quick { display: flex; align-items: center; gap: 28px; margin-left: 44px; font-size: 15px; font-weight: 500; }
-  .quick a { color: var(--muted); text-decoration: none; transition: color .15s; }
-  .quick a:hover, .quick a[aria-current="page"] { color: var(--ink); }
-}
-.site-header .wrap { padding-block: 12px; }
-.nav .btn { min-height: 40px; padding: 8px 18px; font-size: 14.5px; }
-
 /* ---------- Hero: less padding, tighter CTA card ---------- */
 .hero { padding-block: clamp(40px, 6vw, 80px) clamp(56px, 7vw, 96px); }
 .hero__top { gap: 20px; }
@@ -428,12 +418,154 @@ h3 { font-size: 18px; line-height: 1.3; }
   .stats > div { padding: 20px; }
   .stat__num { font-size: 48px; }
   .cols--strong .col, .col, .step, .explore__card { padding: 20px; }
-  .site-header .wrap { padding-block: 10px; }
-  .nav .btn { min-height: 40px; padding: 8px 14px; font-size: 14px; }
   .brand { font-size: 20px; }
   /* compact cookie banner so it doesn't cover half the screen */
   .cc { padding: 18px 18px 16px; }
   .cc__title { font-size: 17px; margin-bottom: 6px; }
   .cc__text { font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
   .cc__btn { min-height: 42px; font-size: 14.5px; }
+}
+
+/* ==========================================================================
+   v3 HEADER: full-width white bar, numbered links that roll on hover,
+   square bracketed buttons, "+" menu on mobile.
+   ========================================================================== */
+html { scroll-padding-top: 110px; }
+html.gh-lock, html.gh-lock body { overflow: hidden; }
+
+.gh {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--bg);
+}
+.gh::after {                       /* hairline under the bar */
+  content: ""; position: absolute; left: 20px; right: 20px; bottom: 0;
+  height: 1px; background: var(--line);
+}
+.gh::before {                      /* small "+" marker in the middle of the hairline */
+  content: ""; position: absolute; left: 50%; bottom: -5px; z-index: 1;
+  width: 11px; height: 11px; transform: translateX(-50%);
+  background:
+    linear-gradient(var(--muted), var(--muted)) center / 11px 1px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) center / 1px 11px no-repeat;
+  opacity: .55;
+}
+.gh__in {
+  display: flex; align-items: center; gap: 16px;
+  height: 94px; padding-inline: 20px;
+}
+.gh .brand { flex: none; }
+
+/* Numbered links */
+.gh__links { display: flex; align-items: center; gap: 30px; margin-left: 72px; }
+.gh__links a {
+  display: inline-flex; align-items: flex-start; gap: 2px;
+  color: var(--ink); text-decoration: none;
+  font-family: var(--display); font-size: 14px; font-weight: 500;
+  letter-spacing: -0.1px; line-height: 22px;
+  opacity: .5; transition: opacity .25s;
+}
+.gh__links a:hover, .gh__links a:focus-visible, .gh__links a[aria-current="page"] { opacity: 1; }
+.gh__links sup, .gh__menu sup {
+  font-family: var(--body); font-size: 10px; font-weight: 500;
+  line-height: 12px; vertical-align: baseline; letter-spacing: 0;
+}
+.roll { display: inline-block; height: 22px; overflow: hidden; }
+.roll > span { display: block; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.roll > span::after { content: attr(data-t); display: block; }
+.gh__links a:hover .roll > span { transform: translateY(-22px); }
+
+/* Square buttons with corner brackets */
+.gh__cta { margin-left: auto; display: flex; align-items: center; gap: 28px; }
+.hb {
+  --b: var(--accent);
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ink); text-decoration: none; white-space: nowrap;
+  font-family: var(--body); font-size: 14px; font-weight: 500; line-height: 1;
+  border-radius: 0;
+  background-image:
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b));
+  background-repeat: no-repeat;
+  background-size: 7px 1.5px, 1.5px 7px, 7px 1.5px, 1.5px 7px,
+                   7px 1.5px, 1.5px 7px, 7px 1.5px, 1.5px 7px;
+  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+  transition: background-color .2s;
+}
+.hb--ghost { height: 41px; padding: 0 16px; background-color: #FBFAF9; }
+.hb--ghost:hover { background-color: #F5F4F3; color: var(--ink); }
+.hb--primary {
+  --b: var(--ink);
+  height: 54px; gap: 18px; padding: 5px 24px 5px 5px;
+  background-color: #F5F4F3;
+}
+.hb--primary:hover { background-color: #EEECEA; color: var(--ink); }
+.hb__icon {
+  display: grid; place-items: center; flex: none;
+  width: 44px; height: 44px;
+  background: var(--accent); color: #FFFFFF;
+}
+.hb__icon svg { width: 18px; height: 18px; transition: transform .25s; }
+.hb--primary:hover .hb__icon svg { transform: translateX(3px); }
+:root[data-theme="dark"] .hb--ghost { background-color: #141414; }
+:root[data-theme="dark"] .hb--primary { background-color: #1C1C1C; }
+:root[data-theme="dark"] .hb--ghost:hover, :root[data-theme="dark"] .hb--primary:hover { background-color: #262626; }
+
+/* "+" toggle and mobile panel */
+.gh__toggle {
+  display: none; margin-left: auto; width: 44px; height: 44px;
+  padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer;
+}
+.gh__toggle svg { width: 26px; height: 26px; transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+.gh.is-open .gh__toggle svg { transform: rotate(45deg); }
+.gh__panel { display: none; }
+.gh__theme { display: none; }
+
+/* Medium desktops: drop the ghost button, tighten the links */
+@media (max-width: 1239px) {
+  .gh__links { gap: 22px; margin-left: 40px; }
+  .gh__cta .hb--ghost { display: none; }
+}
+
+/* Tablet + phone: logo and "+" only; the menu opens full screen */
+@media (max-width: 1023px) {
+  .gh__in { height: 64px; }
+  .gh::before { display: none; }
+  .gh__links, .gh__cta { display: none; }
+  .gh__toggle { display: grid; place-items: center; }
+  .gh__panel {
+    position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+    flex-direction: column; overflow-y: auto; overscroll-behavior: contain;
+    padding: 4px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+    background: var(--bg);
+  }
+  .gh.is-open .gh__panel { display: flex; }
+  .gh__menu { display: flex; flex-direction: column; }
+  .gh__menu a {
+    display: flex; align-items: flex-start; gap: 3px;
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+    color: var(--ink); text-decoration: none;
+    font-family: var(--display); font-size: 24px; font-weight: 500;
+    letter-spacing: -0.03em; line-height: 1.2;
+  }
+  .gh__menu a[aria-current="page"] { color: var(--accent); }
+  .gh__menu sup { font-size: 11px; margin-top: 2px; }
+  .gh__panel-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+  .gh__panel-cta .hb { height: 54px; }
+  .gh__panel-cta .hb--primary { gap: 12px; padding-right: 14px; justify-content: flex-start; }
+  .gh__theme:not([hidden]) {
+    display: inline-flex; align-self: flex-start; margin-top: 18px; padding: 8px 0;
+    border: 0; background: none; color: var(--muted); cursor: pointer;
+    font: 500 14px/1 var(--body);
+  }
+  .gh__theme .when-dark { display: none; }
+  :root[data-theme="dark"] .gh__theme .when-dark { display: inline; }
+  :root[data-theme="dark"] .gh__theme .when-light { display: none; }
+}
+@media (max-width: 340px) {
+  .gh__panel-cta { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roll > span, .gh__toggle svg, .hb__icon svg { transition: none; }
 }

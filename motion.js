@@ -1,4 +1,24 @@
 /*
+  HEADER MENU: the "+" button opens the full-screen menu on tablets and phones.
+*/
+(function () {
+  var h = document.querySelector(".gh");
+  if (!h) return;
+  var t = h.querySelector(".gh__toggle"), p = h.querySelector(".gh__panel");
+  if (!t || !p) return;
+  function set(open) {
+    h.classList.toggle("is-open", open);
+    document.documentElement.classList.toggle("gh-lock", open);
+    t.setAttribute("aria-expanded", open ? "true" : "false");
+    t.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  t.addEventListener("click", function () { set(!h.classList.contains("is-open")); });
+  p.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+  window.addEventListener("resize", function () { if (window.innerWidth >= 1024) set(false); });
+})();
+
+/*
   MOTION: scroll fade-ins and count-up stats.
   Content is fully visible without JavaScript and for visitors who prefer
   reduced motion, so crawlers and AI engines always read the full page.
