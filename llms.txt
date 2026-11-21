@@ -33,8 +33,12 @@ First meaningful movement typically shows within 60 to 90 days.
 
 ## Pages
 
-- [Home](https://postsearchlabs.com/): The shift to AI shortlists, a free shortlist test, deliverables, comparison with other options, how an engagement works, a pipeline model, how results are measured, fit check and FAQ.
+- [Home](https://postsearchlabs.com/): What PostSearchLabs does, how AI assistants decide which tools to recommend, what you get and how an engagement works.
+- [Services](https://postsearchlabs.com/services.html): Outcomes, deliverables, how an engagement works, comparison with other options, how results are measured, fit check and what we promise.
+- [Free tools](https://postsearchlabs.com/tools.html): A shortlist test that writes the prompts buyers use, and a pipeline calculator. Both run in the browser.
 - [AI Shortlist Scorecard](https://postsearchlabs.com/scorecard.html): A free 12-question self-audit that scores how ready a startup is to be recommended by AI and lists the top fixes.
+- [Why AI search matters](https://postsearchlabs.com/why.html): What changed for software buyers, what it costs a startup to be left out, and the survey numbers behind it.
+- [FAQ](https://postsearchlabs.com/faq.html): Answers on GEO versus SEO, engines covered, measurement, timelines, guarantees and how we work with a client's team.
 - [About PostSearchLabs](https://postsearchlabs.com/about.html): Who we are, why we focus only on B2B SaaS and AI startups, what we do, how we work, and our founder, Ayan Chakraborty.
 
 ## Contact

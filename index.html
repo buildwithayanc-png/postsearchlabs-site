@@ -30,7 +30,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://postsearchlabs.com/#org",
       "name": "PostSearchLabs",
       "url": "https://postsearchlabs.com/",
@@ -38,15 +41,48 @@
       "image": "https://postsearchlabs.com/og-image.png",
       "description": "PostSearchLabs is an AI search visibility (generative engine optimization) agency for B2B SaaS and AI startups from seed to Series B. We get startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose, and we tie that visibility to signups, demos and pipeline.",
       "slogan": "People stopped searching. They started asking.",
-      "founder": { "@id": "https://postsearchlabs.com/#founder" },
+      "founder": {
+        "@id": "https://postsearchlabs.com/#founder"
+      },
       "areaServed": "Worldwide",
-      "audience": { "@type": "BusinessAudience", "audienceType": "Seed to Series B B2B SaaS and AI startups" },
-      "knowsAbout": ["Generative engine optimization", "AI search visibility", "Answer engine optimization", "LLM share of voice", "B2B SaaS marketing", "Structured data", "ChatGPT", "Google AI Overviews", "Google AI Mode", "Perplexity", "Gemini", "Claude"],
-      "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@id": "https://postsearchlabs.com/#service" } },
-        { "@type": "Offer", "name": "Free 30-minute AI share-of-voice call", "price": "0", "priceCurrency": "USD", "url": "https://cal.com/postsearchlabs-kp4ztq/30min" }
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Seed to Series B B2B SaaS and AI startups"
+      },
+      "knowsAbout": [
+        "Generative engine optimization",
+        "AI search visibility",
+        "Answer engine optimization",
+        "LLM share of voice",
+        "B2B SaaS marketing",
+        "Structured data",
+        "ChatGPT",
+        "Google AI Overviews",
+        "Google AI Mode",
+        "Perplexity",
+        "Gemini",
+        "Claude"
       ],
-      "potentialAction": { "@type": "ReserveAction", "name": "Book a free share-of-voice call", "target": "https://cal.com/postsearchlabs-kp4ztq/30min" }
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@id": "https://postsearchlabs.com/#service"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Free 30-minute AI share-of-voice call",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://cal.com/postsearchlabs-kp4ztq/30min"
+        }
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "name": "Book a free share-of-voice call",
+        "target": "https://cal.com/postsearchlabs-kp4ztq/30min"
+      }
     },
     {
       "@type": "Service",
@@ -54,8 +90,13 @@
       "name": "AI search visibility for B2B SaaS and AI startups",
       "serviceType": "Generative engine optimization",
       "description": "Buyer prompt mapping, share-of-voice baselines across six AI engines, citation gap analysis, entity and structured data fixes, comparison and alternatives pages, third-party citations, answer-first content and AI attribution reporting.",
-      "provider": { "@id": "https://postsearchlabs.com/#org" },
-      "audience": { "@type": "BusinessAudience", "audienceType": "Seed to Series B B2B SaaS and AI startups" },
+      "provider": {
+        "@id": "https://postsearchlabs.com/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Seed to Series B B2B SaaS and AI startups"
+      },
       "url": "https://postsearchlabs.com/"
     },
     {
@@ -64,14 +105,18 @@
       "name": "Ayan Chakraborty",
       "url": "https://postsearchlabs.com/about.html#founder",
       "jobTitle": "Founder",
-      "worksFor": { "@id": "https://postsearchlabs.com/#org" }
+      "worksFor": {
+        "@id": "https://postsearchlabs.com/#org"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://postsearchlabs.com/#website",
       "url": "https://postsearchlabs.com/",
       "name": "PostSearchLabs",
-      "publisher": { "@id": "https://postsearchlabs.com/#org" },
+      "publisher": {
+        "@id": "https://postsearchlabs.com/#org"
+      },
       "inLanguage": "en"
     },
     {
@@ -79,26 +124,13 @@
       "@id": "https://postsearchlabs.com/#webpage",
       "url": "https://postsearchlabs.com/",
       "name": "PostSearchLabs: AI search visibility for B2B SaaS & AI startups",
-      "isPartOf": { "@id": "https://postsearchlabs.com/#website" },
-      "about": { "@id": "https://postsearchlabs.com/#service" },
+      "isPartOf": {
+        "@id": "https://postsearchlabs.com/#website"
+      },
+      "about": {
+        "@id": "https://postsearchlabs.com/#service"
+      },
       "dateModified": "2026-11-22"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://postsearchlabs.com/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "What is AI search visibility?", "acceptedAnswer": { "@type": "Answer", "text": "It's how often AI assistants such as ChatGPT, Gemini, Perplexity, Claude and Google AI name your product when buyers ask them which tool to choose. The work of improving it is often called generative engine optimization, or GEO." } },
-        { "@type": "Question", "name": "How is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO gets you ranked in a list of links. GEO gets you named inside the answer a buyer reads. They share signals, so we strengthen both, but we measure success by recommendations and pipeline." } },
-        { "@type": "Question", "name": "Which AI engines do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and Google AI Mode. We track each one separately because they draw on different sources." } },
-        { "@type": "Question", "name": "How do you measure results?", "acceptedAnswer": { "@type": "Answer", "text": "Share of voice across a fixed set of buyer prompts, citation rate per AI engine, AI-referred traffic, and the signups and demos that buyers attribute to an AI assistant." } },
-        { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "The free audit takes the first week. The visibility sprint runs 90 days, and monthly growth work starts in month 4. Expect first meaningful movement in 60 to 90 days, measured against your baseline from the first monthly report." } },
-        { "@type": "Question", "name": "Can you guarantee ChatGPT will recommend us?", "acceptedAnswer": { "@type": "Answer", "text": "No. No agency can force a model to name a product, and anyone who guarantees the top spot is guessing. We strengthen every signal AI uses to decide and show you the real answers every month so you can judge the change yourself." } },
-        { "@type": "Question", "name": "Do you write the content?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We draft, your team approves, and nothing ships without your sign-off." } },
-        { "@type": "Question", "name": "We already have an SEO agency or content team. Does this replace them?", "acceptedAnswer": { "@type": "Answer", "text": "No. We work alongside them. We own the AI layer: prompt mapping, citations, comparison pages, structured data and AI attribution, and we hand your team clear briefs for anything they publish." } },
-        { "@type": "Question", "name": "We're pre-launch. Is this for us?", "acceptedAnswer": { "@type": "Answer", "text": "Usually not yet. GEO works best once you have a live product in a category buyers already ask AI about. Book a call and we'll tell you honestly." } },
-        { "@type": "Question", "name": "Who do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "Only software startups: B2B SaaS and AI products from seed to Series B. Focusing on one kind of buyer journey is how we stay sharp at it." } },
-        { "@type": "Question", "name": "What happens on the free call?", "acceptedAnswer": { "@type": "Answer", "text": "In 30 minutes we run your buyers' real prompts across the major AI engines and show you, live, which tools get recommended instead of you. You leave with a clear plan, whether you work with us or not." } }
-      ]
     }
   ]
 }
@@ -108,7 +140,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap"></noscript>
 <script src="theme.js"></script>
-<link rel="stylesheet" href="styles.css?v=20261122g">
+<link rel="stylesheet" href="styles.css?v=20261122h">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -120,11 +152,32 @@
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
-        <a href="#test">Shortlist test</a>
-        <a href="#how">How it works</a>
-        <a href="scorecard.html">Free scorecard</a>
-        <a href="#faq">FAQ</a>
-        <button class="theme-row" type="button" data-theme-toggle hidden><span class="when-light">Night mode</span><span class="when-dark">Day mode</span><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+        <div class="nav__group">
+          <p class="nav__title">Services</p>
+          <a href="services.html">What we do</a>
+          <a href="services.html#how">How it works</a>
+          <a href="services.html#compare">Your options</a>
+          <a href="services.html#proof">How we measure</a>
+          <a href="services.html#fit">Is it a fit?</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Free tools</p>
+          <a href="tools.html#test">Shortlist test</a>
+          <a href="scorecard.html">AI Shortlist Scorecard</a>
+          <a href="tools.html#model">Pipeline calculator</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Learn</p>
+          <a href="why.html">Why AI search matters</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Company</p>
+          <a href="./">Home</a>
+          <a href="about.html">About</a>
+          <a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
+          <button class="theme-row" type="button" data-theme-toggle hidden><span class="when-light">Night mode</span><span class="when-dark">Day mode</span><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+        </div>
       </div>
       <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch between day and night mode" hidden><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
       <a class="btn btn--primary" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
@@ -137,7 +190,7 @@
 
 <main>
 
-  <!-- Hero: headline, then booking. (The video block was removed until there is a real video; README explains how to add one.) -->
+  <!-- Hero -->
   <section class="hero">
     <div class="wrap">
       <div class="hero__top">
@@ -154,7 +207,7 @@
           </a>
           <p class="book__note">In 30 minutes we run your buyers' real prompts and show you, live, which competitors AI recommends instead of you. You leave with a clear plan, whether you work with us or not.</p>
           <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No pitch deck</span></p>
-          <a class="textlink" href="#test">Or run the shortlist test yourself first ↓</a>
+          <a class="textlink" href="tools.html#test">Or run the free shortlist test yourself →</a>
         </div>
       </div>
 
@@ -196,543 +249,131 @@
               <li>[Competitor B]</li>
             </ol>
           </div>
-          <a class="atlas__cta" href="#test">Run the shortlist test for your category →</a>
+          <a class="atlas__cta" href="tools.html#test">Run the shortlist test for your category →</a>
         </div>
       </div>
       <p class="atlas__note">Illustration. Logos show public sources AI assistants can read. No affiliation or endorsement implied.</p>
     </div>
   </section>
 
-  <!-- Chapter 1: why this matters. Tabs are wired up in site.js; without JS the panels simply stack. -->
-  <section class="section section--line chapter" id="shift">
-    <div class="wrap">
-      <p class="kicker chapter__label"><span class="chapter__n">01</span>The shift</p>
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" data-tabs-list aria-label="The shift">
-          <button type="button" class="tabs__tab" data-tab="changed">What changed</button>
-          <button type="button" class="tabs__tab" data-tab="cost">What it costs you</button>
-          <button type="button" class="tabs__tab" data-tab="numbers">The numbers</button>
-        </div>
-        <div class="tabs__panel" id="changed" data-panel="changed">
-          <div class="section__head">
-            <p class="kicker">What changed</p>
-            <h2>There's no page two in an AI answer.</h2>
-            <p class="lede">For twenty years, ranking on page one was enough. Now buyers skip the links and ask an AI assistant which tool to buy. It reads the web for them and hands back a short list. The tools on that list get the demo. Everyone else never learns they were considered.</p>
-          </div>
-          <div class="compare">
-            <div class="panel">
-              <p class="answer__label">Search results · 10 links</p>
-              <ol class="links" aria-label="Ten search result links">
-                <li>01</li><li>02</li><li>03</li><li>04</li><li>05</li><li>06</li><li>07</li><li>08</li><li>09</li><li>10</li>
-              </ol>
-              <p class="panel__foot">You could rank seventh and still win clicks.</p>
-            </div>
-            <div class="panel">
-              <p class="answer__label">AI answer · 3 names</p>
-              <p class="answer__q">Which tool should our team buy?</p>
-              <div class="answer__a">
-                <p>Teams like yours most often choose one of these:</p>
-                <ol>
-                  <li>[Incumbent A]</li>
-                  <li>[Competitor B]</li>
-                  <li>[Competitor C]</li>
-                </ol>
-              </div>
-              <p class="panel__foot">If you aren't named, you aren't in the deal.</p>
-            </div>
-          </div>
-        </div>
-        <div class="tabs__panel" id="cost" data-panel="cost">
-          <div class="section__head">
-            <p class="kicker">Sound familiar?</p>
-            <h2>You can't win a deal <em>you never knew existed.</em></h2>
-          </div>
-          <div class="pains">
-            <div class="pain">
-              <h3>Lost before the demo</h3>
-              <p>Buyers compare vendors in ChatGPT, pick three, and contact only those. If you weren't named, the deal never shows up in your CRM.</p>
-            </div>
-            <div class="pain">
-              <h3>Incumbents get named by default</h3>
-              <p>AI leans on the brands mentioned most across the web. Bigger, older competitors win the answer even when your product is the better fit.</p>
-            </div>
-            <div class="pain">
-              <h3>Content that ranks but never gets quoted</h3>
-              <p>Your team ships posts every week. They rank on Google, yet AI quotes none of them, because they weren't written to be quoted.</p>
-            </div>
-            <div class="pain">
-              <h3>AI describes your product wrong</h3>
-              <p>Old pricing, a feature you killed, the wrong category. When AI gets you wrong, buyers rule you out before they ever reach your site.</p>
-            </div>
-          </div>
-        </div>
-        <div class="tabs__panel" id="numbers" data-panel="numbers">
-          <div class="band band--card">
-            <div class="section__head">
-              <p class="kicker">The shift is already here</p>
-              <h2>The shortlist gets written before anyone talks to sales.</h2>
-            </div>
-            <div class="stats">
-              <div>
-                <p class="stat__num">51%</p>
-                <p class="stat__label">of B2B software buyers now start their research in an AI chatbot instead of a search engine</p>
-              </div>
-              <div>
-                <p class="stat__num">69%</p>
-                <p class="stat__label">chose a different vendor than they had planned because of what a chatbot told them</p>
-              </div>
-              <div>
-                <p class="stat__num">1 in 3</p>
-                <p class="stat__label">bought from a vendor they had never heard of before</p>
-              </div>
-            </div>
-            <p class="source">Source: <a href="https://company.g2.com/news/g2-research-the-answer-economy" target="_blank" rel="noopener">G2, The Answer Economy</a>. Survey of 1,076 B2B software buyers, March 2026.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chapter 2: shortlist test (interactive, tools.js) -->
-  <section class="section" id="test">
+  <!-- The numbers -->
+  <section class="section band" id="numbers">
     <div class="wrap">
       <div class="section__head">
-        <p class="kicker"><span class="chapter__n">02</span>Free shortlist test · 2 minutes</p>
-        <h2>Ask AI what your buyers ask. <em>See if you're named.</em></h2>
-        <p class="lede">Fill in your category and your biggest competitor. We'll write the prompts your buyers actually use. Open each one in an AI assistant, then mark whether your product was named.</p>
+        <p class="kicker">The shift is already here</p>
+        <h2>The shortlist gets written before anyone talks to sales.</h2>
       </div>
-      <div class="tester" data-tester>
-        <form class="tester__form" data-tester-form autocomplete="off">
-          <div class="field">
-            <label for="t-product">Your product</label>
-            <input id="t-product" name="product" type="text" autocapitalize="words" enterkeyhint="next" placeholder="e.g. Invoicely" maxlength="60">
-          </div>
-          <div class="field">
-            <label for="t-category">Category</label>
-            <input id="t-category" name="category" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. invoicing software" maxlength="60">
-          </div>
-          <div class="field">
-            <label for="t-audience">Who it's for</label>
-            <input id="t-audience" name="audience" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. freelancers" maxlength="60">
-          </div>
-          <div class="field">
-            <label for="t-competitor">Biggest competitor</label>
-            <input id="t-competitor" name="competitor" type="text" autocapitalize="words" enterkeyhint="done" placeholder="e.g. FreshBooks" maxlength="60">
-          </div>
-        </form>
-        <p class="tester__hint" data-tester-hint>Showing example prompts. Type your own details above and the prompts update as you go.</p>
-        <ol class="tester__list" data-tester-list></ol>
-        <div class="tester__tally">
-          <div>
-            <strong data-tally-title>Mark each answer to see your result.</strong>
-            <p data-tally-text>Tip: open prompts in a private window so your chat history doesn't sway the answer.</p>
-          </div>
-          <a class="btn btn--primary" data-tally-cta href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Get the full audit on a call</a>
+      <div class="stats">
+        <div>
+          <p class="stat__num">51%</p>
+          <p class="stat__label">of B2B software buyers now start their research in an AI chatbot instead of a search engine</p>
+        </div>
+        <div>
+          <p class="stat__num">69%</p>
+          <p class="stat__label">chose a different vendor than they had planned because of what a chatbot told them</p>
+        </div>
+        <div>
+          <p class="stat__num">1 in 3</p>
+          <p class="stat__label">bought from a vendor they had never heard of before</p>
         </div>
       </div>
+      <p class="source">Source: <a href="https://company.g2.com/news/g2-research-the-answer-economy" target="_blank" rel="noopener">G2, The Answer Economy</a>. Survey of 1,076 B2B software buyers, March 2026.</p>
     </div>
   </section>
 
-  <!-- Chapter 3: the service -->
-  <section class="section section--line chapter" id="services">
-    <div class="wrap">
-      <p class="kicker chapter__label"><span class="chapter__n">03</span>What we do</p>
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" data-tabs-list aria-label="What we do">
-          <button type="button" class="tabs__tab" data-tab="outcomes">What you get</button>
-          <button type="button" class="tabs__tab" data-tab="deliverables">Deliverables</button>
-          <button type="button" class="tabs__tab" data-tab="how">How it works</button>
-          <button type="button" class="tabs__tab" data-tab="compare">Your options</button>
-        </div>
-        <div class="tabs__panel" id="outcomes" data-panel="outcomes">
-          <div class="section__head">
-            <p class="kicker">What you get</p>
-            <h2>What changes when AI recommends <em>your</em> product.</h2>
-          </div>
-          <div class="cols cols--strong">
-            <div class="col">
-              <h3>Buyers arrive already convinced</h3>
-              <p>They were told you're a top option before they reached your site. Demos start further down the funnel and close faster.</p>
-            </div>
-            <div class="col">
-              <h3>Share of voice you can measure</h3>
-              <p>See how often each AI engine recommends you against each competitor, prompt by prompt, month by month.</p>
-            </div>
-            <div class="col">
-              <h3>A channel that compounds</h3>
-              <p>Every citation and every quotable page keeps working across every engine, long after it's published.</p>
-            </div>
-          </div>
-        </div>
-        <div class="tabs__panel" id="deliverables" data-panel="deliverables">
-          <div class="section__head">
-            <p class="kicker">What lands on your desk</p>
-            <h2>Real deliverables, not a dashboard you have to interpret.</h2>
-            <p class="lede">We work on everything AI weighs before it recommends a tool, and every piece of work has a name and an owner.</p>
-          </div>
-          <div class="deliv swipe" data-swipe>
-            <div class="deliv__item">
-              <span class="deliv__tag">Week 1</span>
-              <h3>Buyer prompt map</h3>
-              <p>The recommendation, alternatives and "X vs Y" prompts buyers in your category use, grouped by intent and deal stage.</p>
-            </div>
-            <div class="deliv__item">
-              <span class="deliv__tag">Week 1</span>
-              <h3>Share-of-voice baseline</h3>
-              <p>Every prompt run across six AI engines, with you benchmarked against every competitor that appears.</p>
-            </div>
-            <div class="deliv__item">
-              <span class="deliv__tag">Week 2</span>
-              <h3>Citation gap map</h3>
-              <p>The review sites, listicles, communities and publications AI cites for your category, and which of them leave you out.</p>
-            </div>
-            <div class="deliv__item">
-              <span class="deliv__tag">Week 2</span>
-              <h3>Entity &amp; schema fixes</h3>
-              <p>One clear description of what you do and who it's for, consistent everywhere, plus structured data, llms.txt and AI crawler access.</p>
-            </div>
-            <div class="deliv__item">
-              <span class="deliv__tag">Month 1 onward</span>
-              <h3>Comparison &amp; alternatives pages</h3>
-              <p>"X vs Y" and "alternatives to X" pages and answer-first content, written so a model can lift them straight into an answer.</p>
-            </div>
-            <div class="deliv__item">
-              <span class="deliv__tag">Every month</span>
-              <h3>AI attribution report</h3>
-              <p>Share of voice, citations, AI-referred traffic, and the signups and demos that came from AI, in one page you can show your board.</p>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chips__label">Categories we work in</span>
-            <span class="chip">B2B SaaS</span>
-            <span class="chip">AI tools</span>
-            <span class="chip">Vertical SaaS</span>
-            <span class="chip">Dev tools</span>
-            <span class="chip">Fintech</span>
-            <span class="chip">HR &amp; payroll</span>
-            <span class="chip">Sales &amp; marketing tech</span>
-          </div>
-        </div>
-        <div class="tabs__panel" id="how" data-panel="how">
-          <div class="section__head">
-            <p class="kicker">How it works</p>
-            <h2>From missing to shortlisted in three steps.</h2>
-          </div>
-          <div class="steps swipe" data-swipe>
-            <div class="step">
-              <div class="step__top"><span class="step__n">1</span><span class="step__time">Week 1</span></div>
-              <h3>Free share-of-voice audit</h3>
-              <p>We map your buyers' prompts, run them across the major AI engines and show who gets recommended instead of you.</p>
-            </div>
-            <div class="step">
-              <div class="step__top"><span class="step__n">2</span><span class="step__time">90 days</span></div>
-              <h3>90-day visibility sprint</h3>
-              <p>We sharpen your positioning and structured data, ship comparison pages and start earning the citations AI trusts.</p>
-            </div>
-            <div class="step">
-              <div class="step__top"><span class="step__n">3</span><span class="step__time">From month 4</span></div>
-              <h3>Monthly growth</h3>
-              <p>Ongoing content and citations, with a monthly view of share of voice, AI-referred traffic and pipeline.</p>
-            </div>
-          </div>
-
-          <p class="steps__note">First meaningful movement typically shows within 60–90 days.</p>
-
-          <p class="kicker timeline__label">Inside the sprint: your first 30 days</p>
-          <ol class="timeline" aria-label="Your first 30 days of the sprint">
-            <li>
-              <span class="timeline__day">Day 1</span>
-              <h3>Kickoff</h3>
-              <p>We agree on your category, competitors and the buyer prompts that matter most.</p>
-            </li>
-            <li>
-              <span class="timeline__day">Day 7</span>
-              <h3>Baseline in your inbox</h3>
-              <p>Share of voice on every engine, plus the gaps that cost you the most.</p>
-            </li>
-            <li>
-              <span class="timeline__day">Day 14</span>
-              <h3>Foundations live</h3>
-              <p>Positioning, structured data, llms.txt and crawler access fixed on your site.</p>
-            </li>
-            <li>
-              <span class="timeline__day">Day 30</span>
-              <h3>First pages and report</h3>
-              <p>First comparison pages shipped, citation outreach underway, first monthly report.</p>
-            </li>
-          </ol>
-        </div>
-        <div class="tabs__panel" id="compare" data-panel="compare">
-          <div class="section__head">
-            <p class="kicker">Your options</p>
-            <h2>Why not just buy a tool, or ask your SEO agency?</h2>
-            <p class="lede">You can. Here's what each option actually covers.</p>
-          </div>
-          <div class="vs-wrap">
-            <table class="vs">
-              <thead>
-                <tr>
-                  <th scope="col"><span class="sr">What you need</span></th>
-                  <th scope="col" class="us">PostSearchLabs</th>
-                  <th scope="col">AI tracking tool</th>
-                  <th scope="col">Traditional SEO agency</th>
-                  <th scope="col">In-house</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">See which AI engines recommend you, prompt by prompt</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Six engines, tracked separately</td>
-                  <td data-label="AI tracking tool"><span class="y" aria-label="Yes">✓</span>Core feature</td>
-                  <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Often rankings only</td>
-                  <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Manual spot checks</td>
-                </tr>
-                <tr>
-                  <th scope="row">Someone who ships the fixes</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Pages, schema, citations</td>
-                  <td data-label="AI tracking tool"><span class="n" aria-label="No">–</span>You do the work</td>
-                  <td data-label="SEO agency"><span class="y" aria-label="Yes">✓</span>Built for Google</td>
-                  <td data-label="In-house"><span class="p" aria-label="Partly">~</span>If there's bandwidth</td>
-                </tr>
-                <tr>
-                  <th scope="row">Off-site work: reviews, listicles, communities</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Where AI actually looks</td>
-                  <td data-label="AI tracking tool"><span class="n" aria-label="No">–</span>Not included</td>
-                  <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Usually backlinks</td>
-                  <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Ad hoc</td>
-                </tr>
-                <tr>
-                  <th scope="row">Reporting tied to signups and demos</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Referrer + self-reported</td>
-                  <td data-label="AI tracking tool"><span class="p" aria-label="Partly">~</span>Visibility scores</td>
-                  <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Traffic and rankings</td>
-                  <td data-label="In-house"><span class="p" aria-label="Partly">~</span>If you build it</td>
-                </tr>
-                <tr>
-                  <th scope="row">Built for startup buyer journeys</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Startups only</td>
-                  <td data-label="AI tracking tool"><span class="p" aria-label="Partly">~</span>Any industry</td>
-                  <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Any industry</td>
-                  <td data-label="In-house"><span class="y" aria-label="Yes">✓</span>You know your buyers</td>
-                </tr>
-                <tr>
-                  <th scope="row">Time to a first baseline</th>
-                  <td class="us" data-label="PostSearchLabs"><span class="y" aria-label="Yes">✓</span>Week 1</td>
-                  <td data-label="AI tracking tool"><span class="y" aria-label="Yes">✓</span>Days, once set up</td>
-                  <td data-label="SEO agency"><span class="p" aria-label="Partly">~</span>Varies</td>
-                  <td data-label="In-house"><span class="p" aria-label="Partly">~</span>Weeks to learn</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="vs__note">Already paying for a tracking tool or an SEO agency? Good. We work alongside both and turn what they show into shipped work.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chapter 4: what it is worth and how we prove it (calculator is interactive, tools.js) -->
-  <section class="section section--line chapter" id="value">
-    <div class="wrap">
-      <p class="kicker chapter__label"><span class="chapter__n">04</span>What it's worth</p>
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" data-tabs-list aria-label="What it's worth">
-          <button type="button" class="tabs__tab" data-tab="model">Pipeline calculator</button>
-          <button type="button" class="tabs__tab" data-tab="proof">How we measure</button>
-        </div>
-        <div class="tabs__panel" id="model" data-panel="model">
-          <div class="band band--card">
-            <div class="section__head">
-              <p class="kicker">What a shortlist slot is worth</p>
-              <h2>Put your own numbers in.</h2>
-              <p class="lede">A simple model of what extra demos from AI recommendations would add to your pipeline. Pick a scenario, then move the sliders to match your business.</p>
-            </div>
-            <div class="calc" data-calc>
-              <div class="calc__in">
-                <div class="field">
-                  <span class="field__label" id="scen-label">Scenario: extra demos from AI</span>
-                  <div class="seg" role="group" aria-labelledby="scen-label">
-                    <button type="button" data-scen="0.1" aria-pressed="false">Conservative · +10%</button>
-                    <button type="button" data-scen="0.2" aria-pressed="true">Realistic · +20%</button>
-                    <button type="button" data-scen="0.35" aria-pressed="false">Optimistic · +35%</button>
-                  </div>
-                </div>
-                <div class="range field">
-                  <div class="range__top"><label for="c-demos">Demos or trials per month today</label><output for="c-demos" data-out="demos">40</output></div>
-                  <input id="c-demos" type="range" min="5" max="400" step="5" value="40" data-in="demos">
-                </div>
-                <div class="range field">
-                  <div class="range__top"><label for="c-close">Demo-to-customer rate</label><output for="c-close" data-out="close">20%</output></div>
-                  <input id="c-close" type="range" min="2" max="60" step="1" value="20" data-in="close">
-                </div>
-                <div class="range field">
-                  <div class="range__top"><label for="c-acv">Average contract value per year</label><output for="c-acv" data-out="acv">$12,000</output></div>
-                  <input id="c-acv" type="range" min="1000" max="150000" step="1000" value="12000" data-in="acv">
-                </div>
-              </div>
-              <div class="calc__out" aria-live="polite">
-                <p class="calc__lab">New annual recurring revenue, first year of the uplift</p>
-                <p class="calc__big" data-res="arr">$230K</p>
-                <div class="calc__row">
-                  <div><strong data-res="demos">+8</strong><span>extra demos a month</span></div>
-                  <div><strong data-res="cust">+19</strong><span>new customers a year</span></div>
-                  <div><strong data-res="pipe">$1.15M</strong><span>pipeline value a year <small>(extra demos × ACV, before close rate)</small></span></div>
-                </div>
-                <p class="calc__fine">Pipeline value counts every extra demo at full contract value. New ARR is the part of it that closes, at your demo-to-customer rate.</p>
-                <p class="calc__fine">A model, not a forecast or a promise. On your call we replace these assumptions with your real prompts, your share of voice and your funnel data.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tabs__panel" id="proof" data-panel="proof">
-          <div class="section__head">
-            <p class="kicker">How we prove it</p>
-            <h2>AI traffic hides in your analytics. <em>We make it visible.</em></h2>
-            <p class="lede">Many buyers read an AI answer, then type your URL or search your name. Default analytics files that under "direct". So we measure three ways and report all three.</p>
-          </div>
-          <div class="attrib swipe" data-swipe>
-            <div class="attrib__card">
-              <h3>1. Share of voice</h3>
-              <p>A fixed set of buyer prompts, run on every engine each month. You see exactly which answers name you and which name a competitor.</p>
-              <p class="attrib__code">"best [category] for [use case]" → named on 4 of 6 engines</p>
-            </div>
-            <div class="attrib__card">
-              <h3>2. AI referrer tracking</h3>
-              <p>We set up your analytics to separate visits that arrive from AI assistants, and tag the links we can control.</p>
-              <p class="attrib__code">chatgpt.com · perplexity.ai · gemini.google.com · claude.ai</p>
-            </div>
-            <div class="attrib__card">
-              <h3>3. Self-reported source</h3>
-              <p>One field on your signup or demo form catches what analytics can't: buyers who heard about you from an AI assistant.</p>
-              <p class="attrib__code">How did you hear about us? → "ChatGPT / an AI assistant"</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chapter 5: fit, promise and founder -->
-  <section class="section section--line chapter" id="trust">
-    <div class="wrap">
-      <p class="kicker chapter__label"><span class="chapter__n">05</span>Is it a fit?</p>
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" data-tabs-list aria-label="Is it a fit?">
-          <button type="button" class="tabs__tab" data-tab="fit">Fit check</button>
-          <button type="button" class="tabs__tab" data-tab="promise">Our promise</button>
-        </div>
-        <div class="tabs__panel" id="fit" data-panel="fit">
-          <div class="section__head">
-            <p class="kicker">Fit check</p>
-            <h2>We're a good fit for some startups. <em>Not all.</em></h2>
-          </div>
-          <div class="fit">
-            <div class="fit__col fit__col--yes">
-              <h3>A great fit if you…</h3>
-              <ul>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Sell a live B2B SaaS or AI product with paying customers</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Are seed to Series B, competing with bigger incumbents</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Are in a category buyers already ask AI about</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Have someone who can review and approve content each week</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Want a channel you can measure, not a vanity score</li>
-              </ul>
-            </div>
-            <div class="fit__col fit__col--no">
-              <h3>Probably not a fit if you…</h3>
-              <ul>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Haven't launched yet, or have no clear category</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Want a guaranteed #1 spot in ChatGPT</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Want results by next week</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Are looking for fake reviews or mass AI-written content</li>
-                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Aren't a software company. We work only with startups.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="tabs__panel" id="promise" data-panel="promise">
-          <div class="promise">
-            <div class="promise__text">
-              <h2>What we promise, and what no one can.</h2>
-              <p class="muted">No agency can force a model to recommend a product. Anyone who guarantees the top spot in ChatGPT is guessing. What we can do is strengthen every signal AI uses to decide, and prove the change with the real answers every month.</p>
-              <p class="muted">And we won't take shortcuts that get brands burned: no fake reviews, no hidden text aimed at AI crawlers, no thousand-page AI content farms.</p>
-            </div>
-            <ul class="checks">
-              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>We show you the live AI answers before you spend a dollar.</li>
-              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Every page is approved by your team before it ships.</li>
-              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Reports built on real AI answers and real pipeline.</li>
-              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Works alongside your existing SEO and content team.</li>
-              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Clear scope and timelines agreed before any work starts.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="chapter__after">
-        <!-- TODO(Ayan): add your photo. Save it as assets/ayan.jpg, then add this line as the first thing inside the div below and delete the "founder--nophoto" class:
-             <img class="founder__photo" src="assets/ayan.jpg" alt="Ayan Chakraborty, founder of PostSearchLabs" width="132" height="132" loading="lazy"> -->
-        <div class="founder founder--nophoto">
-          <div class="founder__text">
-            <p class="kicker">Founder-led</p>
-            <blockquote>"Startups don't lose to incumbents on product anymore. They lose in the answer. I started PostSearchLabs to fix that, and you'll work with me directly."</blockquote>
-            <!-- TODO(Ayan): link your name to LinkedIn, e.g. <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">Ayan Chakraborty</a> -->
-            <p class="founder__by">Ayan Chakraborty, Founder, PostSearchLabs</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chapter 6: FAQ -->
-  <section class="section section--line" id="faq">
+  <!-- What you get -->
+  <section class="section" id="services">
     <div class="wrap">
       <div class="section__head">
-        <p class="kicker"><span class="chapter__n">06</span>Questions</p>
-        <h2>What founders ask us first.</h2>
+        <p class="kicker">What you get</p>
+        <h2>What changes when AI recommends <em>your</em> product.</h2>
       </div>
-      <div class="faq">
-        <details open>
-          <summary>What is AI search visibility?</summary>
-          <p>It's how often AI assistants such as ChatGPT, Gemini, Perplexity, Claude and Google AI name your product when buyers ask them which tool to choose. The work of improving it is often called generative engine optimization, or GEO.</p>
-        </details>
-        <details>
-          <summary>How is this different from SEO?</summary>
-          <p>SEO gets you ranked in a list of links. GEO gets you named inside the answer a buyer reads. They share signals, so we strengthen both, but we measure success by recommendations and pipeline.</p>
-        </details>
-        <details>
-          <summary>Which AI engines do you cover?</summary>
-          <p>ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and Google AI Mode. We track each one separately because they draw on different sources.</p>
-        </details>
-        <details>
-          <summary>How do you measure results?</summary>
-          <p>Share of voice across a fixed set of buyer prompts, citation rate per AI engine, AI-referred traffic, and the signups and demos that buyers attribute to an AI assistant.</p>
-        </details>
-        <details>
-          <summary>How long does it take?</summary>
-          <p>The free audit takes the first week. The visibility sprint runs 90 days, and monthly growth work starts in month 4. Expect first meaningful movement in 60 to 90 days, measured against your baseline from the first monthly report.</p>
-        </details>
-        <details>
-          <summary>Can you guarantee ChatGPT will recommend us?</summary>
-          <p>No. No agency can force a model to name a product, and anyone who guarantees the top spot is guessing. We strengthen every signal AI uses to decide and show you the real answers every month so you can judge the change yourself.</p>
-        </details>
-        <details>
-          <summary>Do you write the content?</summary>
-          <p>Yes. We draft, your team approves, and nothing ships without your sign-off.</p>
-        </details>
-        <details>
-          <summary>We already have an SEO agency or content team. Does this replace them?</summary>
-          <p>No. We work alongside them. We own the AI layer: prompt mapping, citations, comparison pages, structured data and AI attribution, and we hand your team clear briefs for anything they publish.</p>
-        </details>
-        <details>
-          <summary>We're pre-launch. Is this for us?</summary>
-          <p>Usually not yet. GEO works best once you have a live product in a category buyers already ask AI about. Book a call and we'll tell you honestly.</p>
-        </details>
-        <details>
-          <summary>Who do you work with?</summary>
-          <p>Only software startups: B2B SaaS and AI products from seed to Series B. Focusing on one kind of buyer journey is how we stay sharp at it.</p>
-        </details>
-        <details>
-          <summary>What happens on the free call?</summary>
-          <p>In 30 minutes we run your buyers' real prompts across the major AI engines and show you, live, which tools get recommended instead of you. You leave with a clear plan, whether you work with us or not.</p>
-        </details>
+      <div class="cols cols--strong">
+        <div class="col">
+          <h3>Buyers arrive already convinced</h3>
+          <p>They were told you're a top option before they reached your site. Demos start further down the funnel and close faster.</p>
+        </div>
+        <div class="col">
+          <h3>Share of voice you can measure</h3>
+          <p>See how often each AI engine recommends you against each competitor, prompt by prompt, month by month.</p>
+        </div>
+        <div class="col">
+          <h3>A channel that compounds</h3>
+          <p>Every citation and every quotable page keeps working across every engine, long after it's published.</p>
+        </div>
+      </div>
+      <p class="section__more"><a class="textlink" href="services.html">See everything we do →</a></p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--line" id="how">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">How it works</p>
+        <h2>From missing to shortlisted in three steps.</h2>
+      </div>
+      <div class="steps swipe" data-swipe>
+        <div class="step">
+          <div class="step__top"><span class="step__n">1</span><span class="step__time">Week 1</span></div>
+          <h3>Free share-of-voice audit</h3>
+          <p>We map your buyers' prompts, run them across the major AI engines and show who gets recommended instead of you.</p>
+        </div>
+        <div class="step">
+          <div class="step__top"><span class="step__n">2</span><span class="step__time">90 days</span></div>
+          <h3>90-day visibility sprint</h3>
+          <p>We sharpen your positioning and structured data, ship comparison pages and start earning the citations AI trusts.</p>
+        </div>
+        <div class="step">
+          <div class="step__top"><span class="step__n">3</span><span class="step__time">From month 4</span></div>
+          <h3>Monthly growth</h3>
+          <p>Ongoing content and citations, with a monthly view of share of voice, AI-referred traffic and pipeline.</p>
+        </div>
+      </div>
+
+      <p class="steps__note">First meaningful movement typically shows within 60–90 days.</p>
+      <p class="section__more"><a class="textlink" href="services.html#how">See the deliverables and your first 30 days →</a></p>
+    </div>
+  </section>
+
+  <!-- Everything that moved off the home page -->
+  <section class="section section--line" id="explore">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Explore</p>
+        <h2>Everything else, one click away.</h2>
+      </div>
+      <div class="explore">
+        <a class="explore__card" href="tools.html#test">
+          <span class="explore__tag">Free tool</span>
+          <h3>Shortlist test</h3>
+          <p>Write the prompts your buyers use and see whether AI names you. Takes 2 minutes.</p>
+        </a>
+        <a class="explore__card" href="scorecard.html">
+          <span class="explore__tag">Free tool</span>
+          <h3>AI Shortlist Scorecard</h3>
+          <p>Twelve questions, a score out of 100 and the fixes that matter most.</p>
+        </a>
+        <a class="explore__card" href="tools.html#model">
+          <span class="explore__tag">Free tool</span>
+          <h3>Pipeline calculator</h3>
+          <p>Put your own numbers on what a shortlist slot is worth.</p>
+        </a>
+        <a class="explore__card" href="services.html">
+          <span class="explore__tag">Services</span>
+          <h3>What we do, in detail</h3>
+          <p>Deliverables, the first 30 days, how we measure and who we're a fit for.</p>
+        </a>
+        <a class="explore__card" href="why.html">
+          <span class="explore__tag">The shift</span>
+          <h3>Why AI search matters</h3>
+          <p>What changed for software buyers, and what it costs to be left out.</p>
+        </a>
+        <a class="explore__card" href="faq.html">
+          <span class="explore__tag">FAQ</span>
+          <h3>Questions founders ask</h3>
+          <p>Timelines, guarantees, the engines we cover and how we work with your team.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -771,25 +412,26 @@
         <div class="footer__col">
           <h2 class="footer__h">Services</h2>
           <ul>
-            <li><a href="#services">What you get</a></li>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#proof">How we measure</a></li>
-            <li><a href="#fit">Who it's for</a></li>
+            <li><a href="services.html">What we do</a></li>
+            <li><a href="services.html#how">How it works</a></li>
+            <li><a href="services.html#proof">How we measure</a></li>
+            <li><a href="services.html#fit">Is it a fit?</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="#test">Shortlist test</a></li>
+            <li><a href="tools.html#test">Shortlist test</a></li>
             <li><a href="scorecard.html">Free scorecard</a></li>
-            <li><a href="#model">Pipeline calculator</a></li>
+            <li><a href="tools.html#model">Pipeline calculator</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="why.html">Why AI search matters</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
           </ul>
         </div>

@@ -83,7 +83,7 @@
 </script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap">
 <script src="theme.js"></script>
-<link rel="stylesheet" href="styles.css?v=20261122g">
+<link rel="stylesheet" href="styles.css?v=20261122h">
 <script src="consent.js"></script>
 </head>
 <body>
@@ -95,11 +95,32 @@
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="nav__links">
-        <a href="./#test">Shortlist test</a>
-        <a href="./#how">How it works</a>
-        <a href="scorecard.html">Free scorecard</a>
-        <a href="./#faq">FAQ</a>
-        <button class="theme-row" type="button" data-theme-toggle hidden><span class="when-light">Night mode</span><span class="when-dark">Day mode</span><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+        <div class="nav__group">
+          <p class="nav__title">Services</p>
+          <a href="services.html">What we do</a>
+          <a href="services.html#how">How it works</a>
+          <a href="services.html#compare">Your options</a>
+          <a href="services.html#proof">How we measure</a>
+          <a href="services.html#fit">Is it a fit?</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Free tools</p>
+          <a href="tools.html#test">Shortlist test</a>
+          <a href="scorecard.html">AI Shortlist Scorecard</a>
+          <a href="tools.html#model">Pipeline calculator</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Learn</p>
+          <a href="why.html">Why AI search matters</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Company</p>
+          <a href="./">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
+          <button class="theme-row" type="button" data-theme-toggle hidden><span class="when-light">Night mode</span><span class="when-dark">Day mode</span><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+        </div>
       </div>
       <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch between day and night mode" hidden><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
       <a class="btn btn--primary" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
@@ -197,25 +218,26 @@
         <div class="footer__col">
           <h2 class="footer__h">Services</h2>
           <ul>
-            <li><a href="./#services">What you get</a></li>
-            <li><a href="./#how">How it works</a></li>
-            <li><a href="./#proof">How we measure</a></li>
-            <li><a href="./#fit">Who it's for</a></li>
+            <li><a href="services.html">What we do</a></li>
+            <li><a href="services.html#how">How it works</a></li>
+            <li><a href="services.html#proof">How we measure</a></li>
+            <li><a href="services.html#fit">Is it a fit?</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Free tools</h2>
           <ul>
-            <li><a href="./#test">Shortlist test</a></li>
+            <li><a href="tools.html#test">Shortlist test</a></li>
             <li><a href="scorecard.html">Free scorecard</a></li>
-            <li><a href="./#model">Pipeline calculator</a></li>
+            <li><a href="tools.html#model">Pipeline calculator</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__h">Company</h2>
           <ul>
             <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="why.html">Why AI search matters</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
           </ul>
         </div>

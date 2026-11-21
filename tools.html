@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free AI visibility tools: shortlist test and pipeline calculator · PostSearchLabs</title>
+<meta name="description" content="Two free tools that run in your browser: write your buyers' prompts and see if AI names you, and model what a shortlist slot is worth.">
+<link rel="canonical" href="https://postsearchlabs.com/tools.html">
+<meta name="theme-color" content="#0D1120">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=2" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Lexend:wght@700&amp;display=swap"></noscript>
+<script src="theme.js"></script>
+<link rel="stylesheet" href="styles.css?v=20261122h">
+<script src="consent.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="PostSearchLabs home">
+      <span class="brand__name">PostSearch<span>Labs</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav__links">
+        <div class="nav__group">
+          <p class="nav__title">Services</p>
+          <a href="services.html">What we do</a>
+          <a href="services.html#how">How it works</a>
+          <a href="services.html#compare">Your options</a>
+          <a href="services.html#proof">How we measure</a>
+          <a href="services.html#fit">Is it a fit?</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Free tools</p>
+          <a href="tools.html#test">Shortlist test</a>
+          <a href="scorecard.html">AI Shortlist Scorecard</a>
+          <a href="tools.html#model">Pipeline calculator</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Learn</p>
+          <a href="why.html">Why AI search matters</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav__group">
+          <p class="nav__title">Company</p>
+          <a href="./">Home</a>
+          <a href="about.html">About</a>
+          <a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
+          <button class="theme-row" type="button" data-theme-toggle hidden><span class="when-light">Night mode</span><span class="when-dark">Day mode</span><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+        </div>
+      </div>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch between day and night mode" hidden><svg class="when-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="when-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+      <a class="btn btn--primary" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="menu-btn__a" d="M4 7h16"></path><path class="menu-btn__b" d="M4 12h16"></path><path class="menu-btn__c" d="M4 17h16"></path></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__top">
+        <p class="eyebrow">Free tools · No email needed</p>
+        <h1>Check your AI visibility <span class="hl">yourself.</span></h1>
+        <p class="lede">Two tools that run in your browser. Nothing you type is sent anywhere.</p>
+        <p class="book__meta"><span>Shortlist test</span> <span>Pipeline calculator</span> <span><a href="scorecard.html">AI Shortlist Scorecard</a></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--line" id="test">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Free shortlist test · 2 minutes</p>
+        <h2>Ask AI what your buyers ask. <em>See if you're named.</em></h2>
+        <p class="lede">Fill in your category and your biggest competitor. We'll write the prompts your buyers actually use. Open each one in an AI assistant, then mark whether your product was named.</p>
+      </div>
+      <div class="tester" data-tester>
+        <form class="tester__form" data-tester-form autocomplete="off">
+          <div class="field">
+            <label for="t-product">Your product</label>
+            <input id="t-product" name="product" type="text" autocapitalize="words" enterkeyhint="next" placeholder="e.g. Invoicely" maxlength="60">
+          </div>
+          <div class="field">
+            <label for="t-category">Category</label>
+            <input id="t-category" name="category" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. invoicing software" maxlength="60">
+          </div>
+          <div class="field">
+            <label for="t-audience">Who it's for</label>
+            <input id="t-audience" name="audience" type="text" autocapitalize="off" enterkeyhint="next" placeholder="e.g. freelancers" maxlength="60">
+          </div>
+          <div class="field">
+            <label for="t-competitor">Biggest competitor</label>
+            <input id="t-competitor" name="competitor" type="text" autocapitalize="words" enterkeyhint="done" placeholder="e.g. FreshBooks" maxlength="60">
+          </div>
+        </form>
+        <p class="tester__hint" data-tester-hint>Showing example prompts. Type your own details above and the prompts update as you go.</p>
+        <ol class="tester__list" data-tester-list></ol>
+        <div class="tester__tally">
+          <div>
+            <strong data-tally-title>Mark each answer to see your result.</strong>
+            <p data-tally-text>Tip: open prompts in a private window so your chat history doesn't sway the answer.</p>
+          </div>
+          <a class="btn btn--primary" data-tally-cta href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Get the full audit on a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="model">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">What a shortlist slot is worth</p>
+        <h2>Put your own numbers in.</h2>
+        <p class="lede">A simple model of what extra demos from AI recommendations would add to your pipeline. Pick a scenario, then move the sliders to match your business.</p>
+      </div>
+      <div class="calc" data-calc>
+        <div class="calc__in">
+          <div class="field">
+            <span class="field__label" id="scen-label">Scenario: extra demos from AI</span>
+            <div class="seg" role="group" aria-labelledby="scen-label">
+              <button type="button" data-scen="0.1" aria-pressed="false">Conservative · +10%</button>
+              <button type="button" data-scen="0.2" aria-pressed="true">Realistic · +20%</button>
+              <button type="button" data-scen="0.35" aria-pressed="false">Optimistic · +35%</button>
+            </div>
+          </div>
+          <div class="range field">
+            <div class="range__top"><label for="c-demos">Demos or trials per month today</label><output for="c-demos" data-out="demos">40</output></div>
+            <input id="c-demos" type="range" min="5" max="400" step="5" value="40" data-in="demos">
+          </div>
+          <div class="range field">
+            <div class="range__top"><label for="c-close">Demo-to-customer rate</label><output for="c-close" data-out="close">20%</output></div>
+            <input id="c-close" type="range" min="2" max="60" step="1" value="20" data-in="close">
+          </div>
+          <div class="range field">
+            <div class="range__top"><label for="c-acv">Average contract value per year</label><output for="c-acv" data-out="acv">$12,000</output></div>
+            <input id="c-acv" type="range" min="1000" max="150000" step="1000" value="12000" data-in="acv">
+          </div>
+        </div>
+        <div class="calc__out" aria-live="polite">
+          <p class="calc__lab">New annual recurring revenue, first year of the uplift</p>
+          <p class="calc__big" data-res="arr">$230K</p>
+          <div class="calc__row">
+            <div><strong data-res="demos">+8</strong><span>extra demos a month</span></div>
+            <div><strong data-res="cust">+19</strong><span>new customers a year</span></div>
+            <div><strong data-res="pipe">$1.15M</strong><span>pipeline value a year <small>(extra demos × ACV, before close rate)</small></span></div>
+          </div>
+          <p class="calc__fine">Pipeline value counts every extra demo at full contract value. New ARR is the part of it that closes, at your demo-to-customer rate.</p>
+          <p class="calc__fine">A model, not a forecast or a promise. On your call we replace these assumptions with your real prompts, your share of voice and your funnel data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="wrap">
+      <div class="final">
+        <p class="kicker">Your free share-of-voice call</p>
+        <h2>Find out what AI tells your buyers about you.</h2>
+        <p class="lede">We'll run the prompts your buyers use and show you, live, which tools get recommended. If AI already names you, we'll tell you. If it doesn't, you'll know exactly why and what to fix.</p>
+        <a class="btn btn--primary btn--lg" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">
+          Book your free 30-minute call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+        </a>
+        <p class="book__meta"><span>30 minutes</span> <span>Free</span> <span>No obligation</span></p>
+        <a class="final__alt" href="scorecard.html">Not ready for a call? Take the 3-minute AI Shortlist Scorecard →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="./" aria-label="PostSearchLabs home">
+          <span class="brand__name">PostSearch<span>Labs</span></span>
+        </a>
+        <p class="footer__slogan">People stopped searching. <em>They started asking.</em></p>
+        <p class="footer__about">We get B2B SaaS and AI startups recommended when buyers ask ChatGPT, Gemini, Perplexity, Claude and Google AI which tool to choose.</p>
+        <a class="btn btn--primary btn--sm footer__cta" href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a free call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+      <nav class="footer__cols" aria-label="Footer">
+        <div class="footer__col">
+          <h2 class="footer__h">Services</h2>
+          <ul>
+            <li><a href="services.html">What we do</a></li>
+            <li><a href="services.html#how">How it works</a></li>
+            <li><a href="services.html#proof">How we measure</a></li>
+            <li><a href="services.html#fit">Is it a fit?</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Free tools</h2>
+          <ul>
+            <li><a href="tools.html#test">Shortlist test</a></li>
+            <li><a href="scorecard.html">Free scorecard</a></li>
+            <li><a href="tools.html#model">Pipeline calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why.html">Why AI search matters</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true" target="_blank" rel="noopener">Book a call</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookie policy</a></li>
+            <li><a href="cookies.html" data-cookie-settings>Cookie settings</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 PostSearchLabs. All rights reserved.</span>
+      <span class="footer__meta">Made for people and AI · <a href="llms.txt">llms.txt</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="tools.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>

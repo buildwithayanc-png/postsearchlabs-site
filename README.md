@@ -2,7 +2,11 @@
 
 Static site for postsearchlabs.com (GitHub Pages). AI search visibility for B2B SaaS and AI startups only.
 
-- `index.html`: home (hero, shortlist test, deliverables, comparison table, how it works, pipeline model, attribution, fit check, FAQ)
+- `index.html`: home, kept short: hero, signal map, the numbers, what you get, how it works, an Explore grid and the final call to action
+- `services.html`: outcomes, deliverables, how it works with the first 30 days, comparison table, how we measure, fit check, promise
+- `tools.html`: free shortlist test and pipeline calculator
+- `why.html`: what changed, what it costs, the numbers
+- `faq.html`: FAQ, with the FAQ schema
 - `scorecard.html`: free AI Shortlist Scorecard (12-question self-audit)
 - `about.html`: who we are, founder, contact
 - `privacy.html`, `terms.html`, `cookies.html`: legal pages
@@ -18,7 +22,7 @@ Search the HTML files for `TODO(Ayan)`. Each one marks something only the founde
 The logo is the wordmark alone, in Lexend Bold: "PostSearch" in the text colour and "Labs" in blue (`.brand__name` in the header and footer of every page). `og-image.png` carries the same wordmark. The P mark is used only as the icon: `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` and `logo.png` (used in the schema). When you replace an icon file, raise the `?v=` number on the icon links in every page, because browsers keep favicons for a long time.
 
 ## Header and footer
-Every page has the same header and footer. If you change one, change it on all seven pages (`index`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
+Every page has the same header and footer. If you change one, change it on all eleven pages (`index`, `services`, `tools`, `why`, `faq`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
 
 ## Contact email
 No contact email is shown yet, because the domain has no mailbox. Once one works, add it back to the footer (Company column) of all seven pages, the home page final call to action, the About, Privacy and Terms pages, the schema in `index.html` and `about.html` (`"email"`), and `llms.txt`.
@@ -29,8 +33,8 @@ After editing `styles.css`, change the `?v=` number on the stylesheet link in ev
 ## Adding a video
 The hero video block was removed until there is a real video. `site.js` still supports one: add a `<div class="video" data-video="home">` block back to the hero (see the git history of `index.html`) and paste the link into `VIDEOS.home` in `site.js` (YouTube embed, Vimeo, Loom embed or a direct .mp4 link).
 
-## Home page chapters and tabs
-The home page is grouped into six numbered chapters. Four of them hold tabs (`data-tabs` in `index.html`, wired up at the end of `site.js`). Each tab button has `data-tab="name"` and its panel has `data-panel="name"` and an `id`. To add a tab, add one button and one panel with the same name. Links to an id inside a panel (for example `#how`, `#model`, `#fit`) open that tab first. Without JavaScript the panels simply stack.
+## Menu
+The ☰ button opens the full menu at every screen width. Links are grouped under Services, Free tools, Learn and Company (`.nav__group` inside `.nav__links`). Every page has the same menu, so add a new link on all eleven pages. `site.js` still contains tab code (`data-tabs`), which no page uses right now.
 
 ## Day / night mode
 `theme.js` runs in the `<head>` of every page. The site follows the visitor's device setting until they click the toggle (the sun/moon button in the header, or the "Night mode" row in the phone menu). Their choice is saved in the browser as `psl_theme`. Any element with `data-theme-toggle` works as a toggle. Dark colours live in `styles.css` under `:root[data-theme="dark"]`.
