@@ -352,6 +352,42 @@ h3 { font-family: var(--body); font-size: 20px; line-height: 1.3; font-weight: 6
 .section { padding-block: clamp(72px, 9vw, 128px); }
 .section--line { border-top: 1px solid var(--line); }
 .section__head { display: flex; flex-direction: column; gap: 18px; max-width: 800px; margin-bottom: clamp(40px, 5vw, 64px); }
+/* Home page chapters: a numbered label, then tabs. site.js adds .tabs--on; without JS the panels stack. */
+.chapter__n { margin-right: 12px; color: var(--muted); }
+.chapter__label { margin: 0 0 20px; }
+.tabs { scroll-margin-top: 96px; }
+.tabs__list { display: none; }
+.tabs--on > .tabs__list {
+  display: flex; flex-wrap: wrap; gap: 4px; width: fit-content; max-width: 100%;
+  margin: 0 0 clamp(36px, 5vw, 56px); padding: 5px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+}
+.tabs__tab {
+  -webkit-appearance: none; appearance: none; flex: none;
+  min-height: 44px; padding: 10px 20px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--muted); cursor: pointer;
+  font: 500 15px/1.2 var(--body); white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+.tabs__tab:hover { color: var(--ink); }
+.tabs__tab[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.tabs__panel + .tabs__panel { margin-top: clamp(56px, 7vw, 96px); }
+.tabs--on > .tabs__panel + .tabs__panel { margin-top: 0; }
+.tabs--on > .tabs__panel .section__head > .kicker { display: none; }
+.band--card { border-radius: 24px; padding: clamp(24px, 4.5vw, 64px); border: 1px solid var(--deep-line); }
+.chapter__after { margin-top: clamp(40px, 5vw, 64px); }
+@media (max-width: 700px) {
+  .tabs--on > .tabs__list {
+    flex-wrap: nowrap; width: auto; border-radius: 16px;
+    overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .tabs--on > .tabs__list::-webkit-scrollbar { display: none; }
+  .tabs__tab { border-radius: 12px; padding: 10px 16px; font-size: 14.5px; }
+  .band--card { border-radius: 18px; padding: 22px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tabs__tab { transition: none; }
+}
 .band { background: var(--deep); color: var(--on-deep); }
 .band .kicker { color: var(--deep-accent); }
 .band .lede { color: var(--on-deep-muted); }

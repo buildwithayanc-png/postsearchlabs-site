@@ -96,3 +96,93 @@ var VIDEOS = {
     update();
   });
 })();
+
+/* Home page chapters: turn each [data-tabs] group into tabs. Without this script the panels simply stack.
+   A link to an id inside a panel (for example #how or #model) opens that tab first. */
+(function () {
+  var groups = document.querySelectorAll("[data-tabs]");
+  if (!groups.length) return;
+  var openers = {};
+
+  Array.prototype.forEach.call(groups, function (group) {
+    var list = group.querySelector("[data-tabs-list]");
+    var tabs = Array.prototype.slice.call(list.querySelectorAll("[data-tab]"));
+    var panels = tabs.map(function (t) { return group.querySelector('[data-panel="' + t.getAttribute("data-tab") + '"]'); });
+
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = j === i;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+      if (tabs[i].scrollIntoView && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = Math.max(0, tabs[i].offsetLeft - 16);
+      }
+      // swipe rows inside the newly shown panel measure themselves on resize
+      try { window.dispatchEvent(new Event("resize")); } catch (e) {}
+    }
+
+    list.setAttribute("role", "tablist");
+    tabs.forEach(function (t, i) {
+      var p = panels[i];
+      t.id = "tab-" + p.id;
+      t.setAttribute("role", "tab");
+      t.setAttribute("aria-controls", p.id);
+      p.setAttribute("role", "tabpanel");
+      p.setAttribute("aria-labelledby", t.id);
+      openers[p.id] = function () { select(i); return group; };
+      t.addEventListener("click", function () { select(i); });
+      t.addEventListener("keydown", function (e) {
+        var k = e.key, n = tabs.length, to = -1;
+        if (k === "ArrowRight") to = (i + 1) % n;
+        else if (k === "ArrowLeft") to = (i + n - 1) % n;
+        else if (k === "Home") to = 0;
+        else if (k === "End") to = n - 1;
+        if (to > -1) { e.preventDefault(); select(to, true); }
+      });
+    });
+    group.classList.add("tabs--on");
+    select(0);
+  });
+
+  // Returns the tab group if the id lives in a panel, after opening that panel.
+  function open(hash) {
+    var id = "";
+    try { id = decodeURIComponent(String(hash || "").replace(/^#/, "")); } catch (e) {}
+    var el = id && document.getElementById(id);
+    var panel = el && el.closest(".tabs__panel");
+    return panel && openers[panel.id] ? openers[panel.id]() : null;
+  }
+  function go(hash) {
+    var group = open(hash);
+    if (group) group.scrollIntoView();
+    return !!group;
+  }
+
+  go(location.hash);
+  // The signal map and the tools change the page height once they start, so line the tab up again
+  // when everything has loaded, unless the visitor has already started scrolling.
+  var touched = false;
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (type) {
+    window.addEventListener(type, function () { touched = true; }, { passive: true, once: true });
+  });
+  window.addEventListener("load", function () {
+    if (touched || !location.hash) return;
+    go(location.hash);
+    setTimeout(function () { if (!touched) go(location.hash); }, 400);
+  });
+  window.addEventListener("hashchange", function () { go(location.hash); });
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="#"]');
+    if (!a || a.target === "_blank") return;
+    var url;
+    try { url = new URL(a.href); } catch (err) { return; }
+    if (url.origin !== location.origin || url.pathname !== location.pathname || !url.hash) return;
+    if (!open(url.hash)) return;
+    e.preventDefault();
+    if (location.hash !== url.hash) history.pushState(null, "", url.hash);
+    go(url.hash);
+  });
+})();
