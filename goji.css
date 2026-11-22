@@ -744,3 +744,37 @@ html.gh-top .gh:not(.is-open)::before { opacity: 0; }
   .sitebox__btn { width: 100%; border-radius: 0 0 12px 12px; }
   .lead__row { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   v6 STEP CARDS ("How it works"): one font per role.
+   Number + title in Fustat (the heading font), pill + text in Geist.
+   ========================================================================== */
+.steps .step { padding: 30px; gap: 12px; }
+.step__top { align-items: center; margin-bottom: 8px; }
+.step__n {
+  width: 46px; height: 46px; border-radius: 12px;
+  font-family: var(--display); font-size: 20px; font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1;
+}
+.step__time {
+  padding: 7px 12px; border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 3%, var(--surface));
+  border: 1px solid var(--line);
+  font-family: var(--body); font-size: 12.5px; font-weight: 500;
+  letter-spacing: 0.01em; line-height: 1;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+.step h3 {
+  font-family: var(--display); font-size: 22px; font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1.2; color: var(--ink);
+}
+.step p {
+  font-size: 15.5px; line-height: 1.65; color: var(--muted);
+  text-wrap: pretty;
+}
+.steps__note { margin-top: 24px; font-size: 14px; line-height: 1.5; }
+@media (max-width: 760px) {
+  .steps .step { padding: 22px; }
+  .step h3 { font-size: 20px; }
+  .step p { font-size: 15px; }
+}
