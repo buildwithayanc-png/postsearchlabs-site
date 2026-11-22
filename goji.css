@@ -778,3 +778,85 @@ html.gh-top .gh:not(.is-open)::before { opacity: 0; }
   .step h3 { font-size: 20px; }
   .step p { font-size: 15px; }
 }
+
+/* ==========================================================================
+   v7 FINAL CTA BAND (bottom of Services, Tools, Why, FAQ, About, Scorecard)
+   Same button language as the header, calmer text, soft glow + grid.
+   ========================================================================== */
+.band:has(.final)::before {               /* centred coral glow instead of the corner one */
+  inset: auto; left: 50%; top: 42%;
+  width: min(900px, 90%); aspect-ratio: 2 / 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgba(242, 84, 45, 0.20), transparent);
+}
+.band:has(.final)::after {                /* faint grid, fades out from the centre */
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(60% 70% at 50% 45%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(60% 70% at 50% 45%, #000 0%, transparent 75%);
+}
+.final { gap: 0; max-width: 760px; margin-inline: auto; }
+.final .kicker { margin-bottom: 18px; }
+.final h2 { margin-bottom: 18px; }
+.final .lede {
+  max-width: 540px; margin: 0 auto;
+  font-size: 17px; line-height: 1.65; color: var(--on-deep-muted);
+  text-wrap: pretty;
+}
+.final h2 + .btn--lg, .final .lede + .btn--lg { margin-top: 34px; }
+
+/* Button: white bar with a coral arrow square, brackets just outside the corners */
+.final .btn--lg {
+  position: relative; gap: 18px;
+  min-height: 58px; padding: 6px 26px 6px 6px;
+  border-radius: 0; background: #FFFFFF; color: #0A0A0A;
+  font: 600 16px/1 var(--body); box-shadow: none;
+}
+.final .btn--lg:hover { background: #F1EFED; color: #0A0A0A; transform: none; }
+.final .btn--lg svg {
+  order: -1; box-sizing: border-box;
+  width: 46px; height: 46px; padding: 14px;
+  background: var(--accent); color: #FFFFFF;
+  transition: background-color .2s;
+}
+.final .btn--lg:hover svg { background: var(--accent-hover); }
+.final .btn--lg::before {
+  --b: rgba(255, 255, 255, 0.6);
+  content: ""; position: absolute; inset: -7px; pointer-events: none;
+  background-image:
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b)),
+    linear-gradient(var(--b),var(--b)), linear-gradient(var(--b),var(--b));
+  background-repeat: no-repeat;
+  background-size: 9px 1.5px, 1.5px 9px, 9px 1.5px, 1.5px 9px,
+                   9px 1.5px, 1.5px 9px, 9px 1.5px, 1.5px 9px;
+  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+}
+
+/* "Free · Takes 2 minutes · …" as small pills */
+.final .book__meta { margin-top: 28px; gap: 8px; font-family: var(--body); font-size: 13px; }
+.final .book__meta span {
+  padding: 7px 13px; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #D4D4D4;
+}
+
+/* "Not ready yet?" link in the body font, underline only on hover */
+.final__alt {
+  margin-top: 22px;
+  font-family: var(--body); font-size: 14.5px; font-weight: 500;
+  color: var(--on-deep-muted); text-decoration: none;
+  transition: color .15s;
+}
+.final__alt:hover { color: #FFFFFF; text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .final .lede { font-size: 16px; }
+  .final .btn--lg { width: 100%; padding: 6px 18px; justify-content: center; }
+  .final .book__meta { margin-top: 22px; }
+}
