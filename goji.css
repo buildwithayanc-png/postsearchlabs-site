@@ -860,3 +860,16 @@ html.gh-top .gh:not(.is-open)::before { opacity: 0; }
   .final .btn--lg { width: 100%; padding: 6px 18px; justify-content: center; }
   .final .book__meta { margin-top: 22px; }
 }
+
+/* ==========================================================================
+   v8 FOOTER BOTTOM LINE: "Made for people and AI · llms.txt" in the body font,
+   same size as the copyright line.
+   ========================================================================== */
+.footer__meta { font-family: var(--body); font-size: inherit; letter-spacing: 0; }
+.site-footer .footer__meta a {
+  color: var(--on-deep);
+  text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  transition: text-decoration-color .15s;
+}
+.site-footer .footer__meta a:hover { text-decoration-color: currentColor; }
