@@ -873,3 +873,18 @@ html.gh-top .gh:not(.is-open)::before { opacity: 0; }
   transition: text-decoration-color .15s;
 }
 .site-footer .footer__meta a:hover { text-decoration-color: currentColor; }
+
+/* ==========================================================================
+   v9 HERO FITS ONE SCREEN ON DESKTOP: type and spacing follow the window
+   height, so the engine strip shows without scrolling on laptops
+   (e.g. 1536x690 at 125% Windows scaling). Big screens keep the full size.
+   ========================================================================== */
+@media (min-width: 761px) {
+  main > .hero:first-child { padding-top: calc(var(--gh-h) + clamp(24px, 4vh, 80px)); padding-bottom: clamp(48px, 7vh, 96px); }
+  .hero__top { gap: clamp(12px, 2.2vh, 20px); }
+  .hero h1 { font-size: clamp(40px, min(5.2vw, 7.6vh), 68px); }
+  .hero .lede { font-size: clamp(16px, min(1.3vw, 2.4vh), 19px); }
+  .hero__video { margin-top: clamp(20px, 3.5vh, 56px); }
+  .hero .sitebox__form { padding-block: clamp(10px, 1.6vh, 16px); }
+  .engines { margin-top: clamp(18px, 3.5vh, 52px); gap: 12px; }
+}
