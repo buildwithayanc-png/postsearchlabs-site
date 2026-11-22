@@ -3,12 +3,13 @@
   1. Shortlist test (home, #test): builds buyer prompts from four fields and opens them in AI assistants.
   2. Pipeline model (home, #model): scenario toggle + sliders.
   3. AI Shortlist Scorecard (scorecard.html): self-audit with a live score and top fixes.
-  4. Sticky booking bar on phones.
-  Everything runs in the browser. Nothing is sent anywhere until the visitor books a call.
+  4. Sticky bar on phones with the main call to action.
+  Everything runs in the browser. Nothing is sent anywhere; the buttons link to the AI visibility check form.
 */
 (function () {
-  var CAL = "https://cal.com/postsearchlabs-kp4ztq/30min?overlayCalendar=true";
-  function calWith(notes) { return CAL + "&notes=" + encodeURIComponent(notes); }
+  // Every tool ends on the free AI visibility check form on the home page.
+  var CAL = "index.html#audit";
+  function calWith(notes) { return CAL; }
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -78,15 +79,15 @@
       var product = val("product") || "my product";
       if (!done) {
         tTitle.textContent = "Mark each answer to see your result.";
-        tText.textContent = "Tip: AI answers change from run to run. On a call we run every prompt several times on six engines and average the result.";
+        tText.textContent = "Tip: AI answers change from run to run. Our free AI visibility check runs every prompt several times on six engines and averages the result.";
         tCta.href = CAL;
         return;
       }
       tTitle.textContent = "Named in " + yes + " of " + done + " answers" + (done < total ? " so far" : "") + ".";
       if (done < total) tText.textContent = "Keep going. " + (total - done) + " prompt" + (total - done > 1 ? "s" : "") + " left to check.";
-      else if (yes === 0) tText.textContent = "AI isn't putting you on the shortlist yet. That's fixable, and the call shows you exactly why it's happening.";
+      else if (yes === 0) tText.textContent = "AI isn't putting you on the shortlist yet. That's fixable, and the free AI visibility check shows you why it's happening.";
       else if (yes < total) tText.textContent = "You're on some shortlists and missing from others. The gaps usually trace back to a handful of sources AI trusts.";
-      else tText.textContent = "Strong start. Now check the other engines and whether AI describes you correctly. The call covers both.";
+      else tText.textContent = "Strong start. Now check the other engines and whether AI describes you correctly. The free AI visibility check covers both.";
       tCta.href = calWith("Shortlist test: " + product + " named in " + yes + " of " + done + " answers. Category: " + (val("category") || "-") + ". Competitor: " + (val("competitor") || "-") + ".");
     }
 
@@ -210,7 +211,7 @@
     score();
   }
 
-  /* ---------- 4. Sticky booking bar (phones) ---------- */
+  /* ---------- 4. Sticky call-to-action bar (phones) ---------- */
   var bar = $("[data-mbar]");
   if (bar) {
     document.body.classList.add("has-mbar");

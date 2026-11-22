@@ -129,7 +129,7 @@
     }).catch(function () {
       button.disabled = false;
       buttonLabel.textContent = "Get my AI visibility check";
-      fail("Sorry, that didn't go through. Please check your connection and try again, or book a call instead.");
+      fail("Sorry, that didn't go through. Please check your connection and try again in a minute.");
     });
   });
 
