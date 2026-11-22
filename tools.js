@@ -8,7 +8,7 @@
 */
 (function () {
   // Every tool ends on the free AI visibility check form on the home page.
-  var CAL = "index.html#audit";
+  var CAL = "/#audit";
   function calWith(notes) { return CAL; }
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }

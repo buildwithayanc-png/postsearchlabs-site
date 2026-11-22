@@ -2,6 +2,8 @@
 
 Static site for postsearchlabs.com (GitHub Pages). AI search visibility for B2B SaaS and AI startups only.
 
+Links use clean URLs (`/tools`, not `tools.html`). GitHub Pages serves `tools.html` at `/tools` automatically, and the old `.html` addresses still work; each page's canonical tag points to the clean URL.
+
 - `index.html`: home, kept short: hero, signal map, the numbers, what you get, how it works, an Explore grid and the final call to action
 - `services.html`: outcomes, deliverables, how it works with the first 30 days, comparison table, how we measure, fit check, promise
 - `tools.html`: free shortlist test and pipeline calculator

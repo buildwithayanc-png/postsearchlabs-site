@@ -21,7 +21,7 @@ var CONSENT_VERSION = 1;
 (function () {
   var COOKIE = "psl_consent";
   var MAX_AGE = 60 * 60 * 24 * 180; // 6 months, then we ask again
-  var POLICY_URL = "/cookies.html";
+  var POLICY_URL = "/cookies";
   var CATEGORY = { ga4: "analytics", clarity: "analytics", linkedin: "marketing", metaPixel: "marketing" };
   var COOKIES = {
     analytics: [/^_ga($|_)/, /^_gid$/, /^_gat/, /^_clck$/, /^_clsk$/],
