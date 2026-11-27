@@ -21,7 +21,7 @@ Links use clean URLs (`/tools`, not `tools.html`). GitHub Pages serves `tools.ht
 Search the HTML files for `TODO(Ayan)`. Each one marks something only the founder can supply: photo, LinkedIn URL, short bio, legal entity and address, payment and termination terms, and a legal review of `terms.html`.
 
 ## Logo
-The logo is the wordmark alone, in Lexend Bold: "PostSearch" in the text colour and "Labs" in blue (`.brand__name` in the header and footer of every page). `og-image.png` carries the same wordmark. The P mark is used only as the icon: `favicon.ico`, `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png` (orange, on a transparent or white background) and `logo.png` (blue, used in the schema). When you replace an icon file, raise the `?v=` number on the icon links in every page, because browsers keep favicons for a long time.
+The logo is the wordmark alone, in Lexend Bold: "PostSearch" in the text colour and "Labs" in blue (`.brand__name` in the header and footer of every page). `og-image.png` carries the same wordmark. The P mark is used only as the icon: `favicon.svg` (the master, orange `#FA4D1E`), `favicon.ico`, `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png` and `logo.png` (used in the schema). The PNG and ICO files are rendered from `favicon.svg`, so change the SVG first and re-render the rest. When you replace an icon file, raise the `?v=` number on the icon links in every page, because browsers keep favicons for a long time.
 
 ## Header and footer
 Every page has the same header and footer. If you change one, change it on all eleven pages (`index`, `services`, `tools`, `why`, `faq`, `about`, `scorecard`, `privacy`, `terms`, `cookies`, `404`). `404.html` uses links that start with `/`.
